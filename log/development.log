@@ -1,0 +1,170 @@
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (19.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3892345956427423530);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRegions (20151214175835)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateRegions < ActiveRecord::Migration[4.2] (called from block in execute at /Users/macOS/.rvm/gems/ruby-2.4.0@global/gems/rake-12.0.0/lib/rake/task.rb:250)
+  [1m[35m (14.4ms)[0m  [1m[35mCREATE TABLE "regions" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20151214175835"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateVenues (20151214175903)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateVenues < ActiveRecord::Migration[4.2] (called from block in execute at /Users/macOS/.rvm/gems/ruby-2.4.0@global/gems/rake-12.0.0/lib/rake/task.rb:250)
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "venues" ("id" serial primary key, "name" character varying, "full_address" character varying, "region_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_631e818549"
+FOREIGN KEY ("region_id")
+  REFERENCES "regions" ("id")
+)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_venues_on_region_id" ON "venues"  ("region_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20151214175903"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategories (20151214180054)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateCategories < ActiveRecord::Migration[4.2] (called from block in execute at /Users/macOS/.rvm/gems/ruby-2.4.0@global/gems/rake-12.0.0/lib/rake/task.rb:250)
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "categories" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20151214180054"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEvents (20151214180128)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateEvents < ActiveRecord::Migration[4.2] (called from block in execute at /Users/macOS/.rvm/gems/ruby-2.4.0@global/gems/rake-12.0.0/lib/rake/task.rb:250)
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" serial primary key, "starts_at" timestamp, "ends_at" timestamp, "venue_id" integer, "hero_image_url" character varying, "extended_html_description" text, "category_id" integer, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_f476266cf4"
+FOREIGN KEY ("venue_id")
+  REFERENCES "venues" ("id")
+, CONSTRAINT "fk_rails_fd5598a81d"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_venue_id" ON "events"  ("venue_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_category_id" ON "events"  ("category_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20151214180128"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTicketTypes (20151215104433)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateTicketTypes < ActiveRecord::Migration[4.2] (called from block in execute at /Users/macOS/.rvm/gems/ruby-2.4.0@global/gems/rake-12.0.0/lib/rake/task.rb:250)
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "ticket_types" ("id" serial primary key, "event_id" integer, "price" integer, "name" character varying, "max_quantity" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_3f5bd3dab9"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX  "index_ticket_types_on_event_id" ON "ticket_types"  ("event_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20151215104433"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-06-27 16:09:35.621677"], ["updated_at", "2017-06-27 16:09:35.621677"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(3892345956427423530)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2017-06-27 23:09:48 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (4094.7ms)
+Completed 200 OK in 4245ms (Views: 4229.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/font-kit-rails/open-sans.self-ccb02f2b096fadbff01ec229bdbbacf49b5e371cb900c0a66e4c54d0cc110b64.css?body=1" for 127.0.0.1 at 2017-06-27 23:09:53 +0700
+Started GET "/assets/application.self-b12822f2a23f962ed1fedadadbec8491041bdbf002fc4de847d5d1c0ed987334.css?body=1" for 127.0.0.1 at 2017-06-27 23:09:53 +0700
+Started GET "/assets/tether/tether.self-49a614f96d3d9b228d4f800376a8db0a8315c1f10eb759f66a528112980505de.js?body=1" for 127.0.0.1 at 2017-06-27 23:09:53 +0700
+Started GET "/assets/bootstrap/alert.self-8ec79d32a4387947ba9c697a802d190e85eaabd2d7868e188ceb32bfaff27090.js?body=1" for 127.0.0.1 at 2017-06-27 23:09:53 +0700
+Started GET "/assets/bootstrap/util.self-ee646345d4a58a58a1c5f97a3def830f24884ebd628cedc00c5cc9bb748f8dcf.js?body=1" for 127.0.0.1 at 2017-06-27 23:09:53 +0700
+Started GET "/assets/bootstrap/button.self-11f2f59490a5ed1ee00730174836d887cf01ddd797cf2b080e7d9dd1f988faa3.js?body=1" for 127.0.0.1 at 2017-06-27 23:09:53 +0700
+Started GET "/assets/bootstrap/carousel.self-a1068285d9397c8a3fe8911b395c0ca7eaa7d98460f68a32896dbdea5904f8ae.js?body=1" for 127.0.0.1 at 2017-06-27 23:09:53 +0700
+Started GET "/assets/bootstrap/collapse.self-d36e6561deb41e4e98a568aa5be6b3d14a6d4d604d6923d3732ed8d97d734854.js?body=1" for 127.0.0.1 at 2017-06-27 23:09:53 +0700
+Started GET "/assets/bootstrap/dropdown.self-9001a6392843799bd3f8fefa8f2b90bc2ea9e0a70cb5148039787b50b18abc51.js?body=1" for 127.0.0.1 at 2017-06-27 23:09:53 +0700
+Started GET "/assets/bootstrap/modal.self-86f0500b4628eba403a8e8a2c31a642d399d7efebb27ccc40f03b0f98f458461.js?body=1" for 127.0.0.1 at 2017-06-27 23:09:53 +0700
+Started GET "/assets/bootstrap/scrollspy.self-bc2becbc0f4b31f6fabf6aa80923e509fa9a0fb55165dac75333164564d619b2.js?body=1" for 127.0.0.1 at 2017-06-27 23:09:53 +0700
+Started GET "/assets/bootstrap/tooltip.self-35e74be099c220a4b49c8a825b32613a19641d8b4538a78e819a8b9a75de2b40.js?body=1" for 127.0.0.1 at 2017-06-27 23:09:53 +0700
+Started GET "/assets/bootstrap/tab.self-8c546e0109ea36cfbe17faff530986e24eb7043bd1237c64bcb8257f24b0285c.js?body=1" for 127.0.0.1 at 2017-06-27 23:09:53 +0700
+Started GET "/assets/bootstrap/popover.self-23ed39658a0cf53b747d72cc537e52bc9fc33b3d8eab3872d38186e3631b519c.js?body=1" for 127.0.0.1 at 2017-06-27 23:09:53 +0700
+Started GET "/assets/tickets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-27 23:09:53 +0700
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-27 23:09:53 +0700
+Started GET "/assets/open-sans/OpenSans-Regular-webfont-7d161ab06fa3d662498d87f84e612acda5b78887d586d030357be22d4ae9afc7.woff" for 127.0.0.1 at 2017-06-27 23:09:53 +0700
+Started GET "/assets/color-me-run-4f54d48bccce706af28ffa1c65e86014b942ae5a855bc857c28f8bd571f7058f.jpg" for 127.0.0.1 at 2017-06-27 23:09:53 +0700
+Started GET "/assets/open-sans/OpenSans-Bold-webfont-87f7d13b1abfab993c9d5f5e5c0719222db257832f934bb3d9e822098f609224.woff" for 127.0.0.1 at 2017-06-27 23:09:53 +0700
+Started GET "/" for 127.0.0.1 at 2017-06-27 23:09:57 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-27 23:09:59 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-27 23:10:00 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 57ms (Views: 54.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-27 23:10:01 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?search=canh" for 127.0.0.1 at 2017-06-27 23:10:05 +0700
+Processing by EventsController#index as HTML
+  Parameters: {"search"=>"canh"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 51ms (Views: 49.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?search=canh" for 127.0.0.1 at 2017-06-27 23:10:09 +0700
+Processing by EventsController#index as HTML
+  Parameters: {"search"=>"canh"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 67ms (Views: 65.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/?search=canh" for 127.0.0.1 at 2017-06-27 23:10:09 +0700
+Processing by EventsController#index as HTML
+  Parameters: {"search"=>"canh"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/?search=canh" for 127.0.0.1 at 2017-06-27 23:10:14 +0700
+Processing by EventsController#index as HTML
+  Parameters: {"search"=>"canh"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 55ms (Views: 52.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-27 23:10:17 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 48ms (Views: 46.1ms | ActiveRecord: 0.2ms)
+
+

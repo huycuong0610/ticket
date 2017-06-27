@@ -11,14 +11,14 @@
 
 The following **required** functionality is complete:
 
-* [ ] Implement required user stories
-* [ ] 10 model tests, 2 route tests, 2 controller tests, 2 view tests.
+* [ x ] Implement required user stories
+* [ x ] 10 model tests, 2 route tests, 2 controller tests, 2 view tests.
 
 The person with best test coverage will win a small present from the instructor :)
 
 #### Events
 
-* [ ] Users can see a list of upcoming events. Past events should not be shown.
+* [ x ] Users can see a list of upcoming events. Past events should not be shown.
     * **HINT**: Good candidate for a test. You can write test first --> fail --> fast similar to demo
     * Suggestions:
         * Implement `/upcoming` route test to go to 'events#index'
