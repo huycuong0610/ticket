@@ -1,19 +1,154 @@
-/*
- *= require font-kit-rails/open-sans
-*/
+@import "materialize";
+@import "toastr";
 
-@import "bootstrap";
-@import "font-awesome";
-@import "col-helpers";
-@import "nav";
-@import "events";
-@import "tickets";
+.brand-logo {
+  margin-left: 16px;
+}
+
+button:focus {
+  outline: 0;
+}
+
+#search:focus {
+  border-bottom: 1px solid #90B63E;
+  box-shadow: 0 1px 0 0 #90B63E;
+}
+
+input[type=text].valid {
+  border-bottom: 1px solid #90B63E;
+  box-shadow: 0 1px 0 0 #90B63E;
+}
+
+input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #90B63E;
+  box-shadow: 0 1px 0 0 #90B63E;
+}
+
+input[type=text]:focus:not([readonly]) + label {
+  color: #90B63E;
+}
+
+input[type=number].valid {
+  border-bottom: 1px solid #90B63E;
+  box-shadow: 0 1px 0 0 #90B63E;
+}
+
+input[type=number]:focus:not([readonly]) {
+  border-bottom: 1px solid #90B63E;
+  box-shadow: 0 1px 0 0 #90B63E;
+}
+
+input[type=number]:focus:not([readonly]) + label {
+  color: #90B63E;
+}
+
+#sold-out {
+  color: #cecece;
+}
+
+.input-field label {
+  left: 0;
+}
+
+.modal {
+  width: 40%;
+  height: 60%;
+}
+
+.notice {
+  background-color: #4caf50;
+}
+
+.alert {
+  background-color: #f44336;
+}
+
+.btn {
+  background-color: #90B63E;
+}
+
+.btn:hover {
+  background-color: #90B63E;
+}
+
+.btn:focus {
+  background-color: #90B63E;
+}
+
+.btn#btn-book {
+  background-color: #f44336;
+}
+
+.btn:hover#btn-book {
+  background-color: #f44336;
+}
+
+.btn:focus#btn-book {
+  background-color: #f44336;
+}
+
+.create-btn {
+  bottom: 128px;
+  right: 32px;
+  color: #90B63E;
+}
+
+.nav-wrapper {
+  background-color: #90B63E;
+}
 
 body {
-  font-family: 'Open Sans';
-}
-.btn.btn-danger {
-  background-color: rgb(216, 87, 66);
-  border: 2px solid rgb(241, 112, 91);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
+main {
+  flex: 1 0 auto;
+}
+
+#content {
+  overflow: hidden
+}
+
+.container {
+  width: 100%;
+}
+
+footer.page-footer .footer-copyright {
+  margin-top: 0;
+  background-color: #90B63E;
+}
+
+footer.page-footer {
+  margin-top: 0;
+  padding-left: 16px;
+  background-color: #90B63E;
+}
+
+.page-footer {
+  background-color: #90B63E;
+}
+
+.info {
+  font-size: 20px;
+}
+
+.text-info {
+  margin-left: 8px;
+}
+
+.background-blur {
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
+
+#btn-book {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  font-size: 20px;
+}
