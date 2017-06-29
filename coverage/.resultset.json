@@ -16,8 +16,15 @@
         1,
         null
       ],
-      "/Users/macOS/projects/ticket/app/controllers/events_controller.rb": [
+      "/Users/macOS/projects/ticket/app/models/event.rb": [
         1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
         1,
         0,
         null,
@@ -25,16 +32,9 @@
         1,
         0,
         null,
-        null
-      ],
-      "/Users/macOS/projects/ticket/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
         null
       ]
     },
-    "timestamp": 1498580762
+    "timestamp": 1498583816
   }
 }
