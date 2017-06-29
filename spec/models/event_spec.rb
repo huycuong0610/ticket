@@ -1,6 +1,26 @@
 require 'rails_helper'
 
-RSpec.describe Event, type: :model do
+	let(:event) {event = Event.new}
+  describe "#venue_name" do
+  	it "return nil if there is no venue" do
+  		expect(event.venue_name).to be_nil
+  	end
+
+  	it "returns venue name if there is a event" do
+  		event.venue = Venue.new(name: "RMIT")
+  		expect(event.venue_name).to eq "RMIT"
+  	end
+  end
+
+  describe "#feature_events" do
+    it "Past events should not be shown"  do
+       event1, event2 = Event.new(starts_at: 1.day.ago), Event.new(starts_at: DateTime.now + 5.days)
+       event1.save! validate: false
+       event2.save! validate: false 
+       expect(Event.feature_events).to eq [event2]
+     end
+  end 
+
   RSpec.describe Event, type: :model do
   describe ".upcoming" do
     it "return [] when there are no events" do
@@ -19,5 +39,12 @@ RSpec.describe Event, type: :model do
       expect(Event.upcoming).to eq [b]
     end
   end
-end
+
+  describe "Event have at least one ticket type" do
+    it "Event dont have ticket type" do
+      event.publish = true
+      event.save! validate: false
+      expect(event.make_publish).to eq nil
+    end
+  end
 end

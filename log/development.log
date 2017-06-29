@@ -168,3 +168,310 @@ Processing by EventsController#index as HTML
 Completed 200 OK in 48ms (Views: 46.1ms | ActiveRecord: 0.2ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3892345956427423530);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3892345956427423530)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Ho Chi Minh"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "regions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ho Chi Minh"], ["created_at", "2017-06-29 16:25:44.394734"], ["updated_at", "2017-06-29 16:25:44.394734"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Ha Noi"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "regions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ha Noi"], ["created_at", "2017-06-29 16:25:44.403698"], ["updated_at", "2017-06-29 16:25:44.403698"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Binh Thuan"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "regions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Binh Thuan"], ["created_at", "2017-06-29 16:25:44.406544"], ["updated_at", "2017-06-29 16:25:44.406544"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Da Nang"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "regions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Da Nang"], ["created_at", "2017-06-29 16:25:44.408962"], ["updated_at", "2017-06-29 16:25:44.408962"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Lam Dong"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "regions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lam Dong"], ["created_at", "2017-06-29 16:25:44.411018"], ["updated_at", "2017-06-29 16:25:44.411018"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Entertainment"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Entertainment"], ["created_at", "2017-06-29 16:25:44.420593"], ["updated_at", "2017-06-29 16:25:44.420593"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Learning"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Learning"], ["created_at", "2017-06-29 16:25:44.422651"], ["updated_at", "2017-06-29 16:25:44.422651"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Everything Else"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Everything Else"], ["created_at", "2017-06-29 16:25:44.424357"], ["updated_at", "2017-06-29 16:25:44.424357"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT  "regions".* FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Lam Dong"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVenue Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "venues" WHERE "venues"."name" = $1 LIMIT $2[0m  [["name", "Da Lat City"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "venues" ("name", "full_address", "region_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Da Lat City"], ["full_address", "Ngoc Phat Hotel 10 Hồ Tùng Mậu Phường 3, Thành phố Đà Lạt, Lâm Đồng, Thành Phố Đà Lạt, Lâm Đồng"], ["region_id", 5], ["created_at", "2017-06-29 16:25:44.440680"], ["updated_at", "2017-06-29 16:25:44.440680"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Everything Else"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = $1 LIMIT $2[0m  [["name", "Việt Nam Thử Thách Chiến Thắng"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("starts_at", "ends_at", "venue_id", "hero_image_url", "extended_html_description", "category_id", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["starts_at", "2016-03-11 00:00:00"], ["ends_at", "2016-03-13 08:00:00"], ["venue_id", 1], ["hero_image_url", "https://media.ticketbox.vn/eventcover/2015/10/25/C6A1A5.jpg?w=1040&maxheight=400&mode=crop&anchor=topcenter"], ["extended_html_description", "    <p style=\"text-align:center\"><span style=\"font-size:20px\">VIỆT NAM THỬ THÁCH CHIẾN THẮNG 2016</span></p>\n    <p style=\"text-align:center\"><span style=\"font-size:20px\">Giải đua xe đạp địa hình 11-13/03/2016</span></p>\n    <p style=\"text-align:center\"><span style=\"font-size:16px\"><span style=\"font-family:arial,helvetica,sans-serif\">Việt Nam Th</span>ử Thách Chiến Thắng là giải đua xe đạp địa hình được tổ chức như một sự tri ân, và cũng nhằm thỏa mãn lòng đam mẹ của những người yêu xe đạp địa hình nói chung, cũng như cho những ai đóng góp vào môn thể thao đua xe đạp tại thành phố Hồ Chí Minh. Cuộc đua diễn ra ở thành phố cao nguyên hùng vĩ Đà Lạt, với độ cao 1,500m (4,900ft) so với mặt nước biển. Đến với đường đua này ngoài việc tận hưởng cảnh quan nơi đây, bạn còn có cơ hội biết thêm về nền văn hóa của thành phố này. </span></p>\n    <p style=\"text-align:center\"><span style=\"font-size:16px\">Hãy cùng với hơn 350 tay đua trải nghiệm 04 lộ trình đua tuyệt vời diễn ra trong 03 ngày tại Đà Lạt và bạn sẽ có những kỉ niệm không bao giờ quên!</span></p>\n    <p style=\"text-align:center\"><span style=\"font-size:16px\">Để biết thêm thông tin chi tiết và tạo thêm hứng khởi cho cuộc đua 2016, vui lòng ghé thăm trang web</span></p>\n    <p style=\"text-align:center\"><span style=\"font-size:16px\"><strong><span style=\"background-color:transparent; color:rgb(0, 0, 0)\">www.vietnamvictorychallenge.com. </span></strong></span></p>\n"], ["category_id", 3], ["name", "Việt Nam Thử Thách Chiến Thắng"], ["created_at", "2017-06-29 16:25:44.461998"], ["updated_at", "2017-06-29 16:25:44.461998"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.3ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 500000], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 500000], ["name", "2016 Việt Nam Thử Thách Chiến Thắng dành cho những tay đua đăng kí sớm."], ["max_quantity", 95], ["created_at", "2017-06-29 16:25:44.485500"], ["updated_at", "2017-06-29 16:25:44.485500"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "ticket_types" SET "event_id" = $1, "updated_at" = $2 WHERE "ticket_types"."id" = $3[0m  [["event_id", 1], ["updated_at", "2017-06-29 16:25:44.490913"], ["id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.2ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 2000000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 2000000], ["name", "Việt Nam Thử Thách Chiến Thắng ( Giá chính thức)"], ["max_quantity", 5], ["created_at", "2017-06-29 16:25:44.493045"], ["updated_at", "2017-06-29 16:25:44.493045"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ticket_types" SET "event_id" = $1, "updated_at" = $2 WHERE "ticket_types"."id" = $3[0m  [["event_id", 1], ["updated_at", "2017-06-29 16:25:44.495112"], ["id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRegion Load (0.1ms)[0m  [1m[34mSELECT  "regions".* FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Ho Chi Minh"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVenue Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "venues" WHERE "venues"."name" = $1 LIMIT $2[0m  [["name", "Sân vận động quân khu 7"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "venues" ("name", "full_address", "region_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Sân vận động quân khu 7"], ["full_address", "202 Hoàng Văn Thụ, Quận Tân Bình, Hồ Chí Minh"], ["region_id", 1], ["created_at", "2017-06-29 16:25:44.497785"], ["updated_at", "2017-06-29 16:25:44.497785"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Entertainment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = $1 LIMIT $2[0m  [["name", "Cảm ơn Đời - Live Concert Đan Trường"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "events" ("starts_at", "ends_at", "venue_id", "hero_image_url", "extended_html_description", "category_id", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["starts_at", "2016-01-16 13:00:00"], ["ends_at", "2016-01-16 15:30:00"], ["venue_id", 2], ["hero_image_url", "https://media.ticketbox.vn/eventcover/2015/12/11/C68636.jpg?w=1040&maxheight=400&mode=crop&anchor=topcenter"], ["extended_html_description", "  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\">Đan Trường cũng tiết lộ kế hoạch chuẩn bị cho live show kỷ niệm 20 năm ca hát của anh, sẽ diễn ra vào ngày 16-1-2016. “Nói ra, mọi người bảo tôi lo xa nhưng tính tôi là vậy. Tôi là người kỹ tính và chỉn chu trong mọi việc nên không cho phép sai sót, dù nhỏ, trong live show của mình. Để đạt được điều ấy, tôi phải chuẩn bị thật kỹ. Đó là chưa kể có rất nhiều chuyện phải làm cho đến khi diễn ra live show, như phát hành các sản phẩm âm nhạc” - anh tâm sự.</p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\"><img src=\"https://media.ticketbox.vn/agenda/2015/12/14/57EEE9.jpg\" /></p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\">Vẫn là một Đan Trường đa năng bởi sự đa sắc trong âm nhạc, anh đang khát vọng chinh phục mọi đối tượng công chúng yêu nhạc của mình một cách hoàn hảo nhất. Mỗi người có một nhận định, đánh giá riêng về chất giọng cũng như phong cách biểu diễn của Đan Trường nhưng những thành tích mà ca sĩ này gặt hái được trong suốt nhiều năm theo đuổi nghiệp hát thì không ai có thể phủ nhận. 19 năm ca hát, Đan Trường của ngày nay vẫn là một giọng ca được đông đảo công chúng yêu mến.</p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\">Xét ở mọi góc độ, thành công của ca sĩ Đan Trường tại thị trường âm nhạc còn sơ khai như của Việt Nam những năm cuối thập niên 1990 có thể xem là một kỳ tích. Anh xuất hiện khiêm tốn nhưng nhanh chóng tỏa sáng và trở nên nổi bật giữa một rừng ngôi sao ca nhạc Việt Nam lúc ấy.</p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\">Nhìn lại hành trình đã qua của Đan Trường, không thể bỏ qua yếu tố may mắn khi mọi thứ đối với anh gần như được trải hoa hồng. “Thành tựu 19 năm qua mà tôi có được rõ ràng là nhờ may mắn nhưng nếu không có sự cố gắng và nỗ lực một cách tận tâm của mình và cả ông bầu Hoàng Tuấn, tôi không tin có thể đạt được như vậy. Một nghệ sĩ trụ lâu được ở thị trường giải trí là nhờ sự ủng hộ của khán giả nhưng nếu nghệ sĩ ấy không chứng minh cho khán giả thấy mình xứng đáng được yêu mến, công chúng cũng sẽ quay lưng” - Đan Trường chiêm nghiệm.</p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\">“Đan Trường chính là hiện thân một ca sĩ thần tượng đúng nghĩa nhất bởi hiệu ứng tổng thể mang lại từ vóc dáng, giọng hát tình cảm và quan trọng hơn là cách chọn bài hát khá khéo léo của anh. Đan Trường luôn có những ca khúc ăn khách mỗi khi giới thiệu một sản phẩm âm nhạc mới” - ca sĩ Cẩm Ly nhận xét.</p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\">Theo nhạc sĩ Hữu Minh, những cái mới phù hợp với trào lưu hiện tại cũng như với văn hóa của người Việt sẽ mau chóng được công chúng đón nhận. “Thành công của Đan Trường một phần là nhờ sự đón đầu xu hướng mới đó” - nhạc sĩ này khẳng định.</p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\">Mỗi sản phẩm âm nhạc của Đan Trường khi ra mắt đều trở thành bản hit (ăn khách) trên các bảng xếp hạng. Hẳn nhiên, sự yêu mến không điều kiện, vô tư của lực lượng fan (người hâm mộ) hùng hậu đã góp phần không nhỏ trong việc đưa một ca khúc mới của thần tượng đứng đầu bảng xếp hạng âm nhạc. Song, không khó để nhận ra Đan Trường là ca sĩ không ngại thể nghiệm những điều mới mẻ để mang đến người yêu nhạc những sản phẩm lạ tai, đón đầu xu hướng.</p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\"><img src=\"https://media.ticketbox.vn/agenda/2015/12/14/06EAAD.jpg\" /></p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\">Từ nhạc trẻ, trữ tình, âm hưởng dân ca, sử ca, truyền thống cách mạng, đến cả nhạc dance, hip hop, R&B..., Đan Trường đều thử sức, bất chấp tuổi tác. Sự nỗ lực đó luôn mang lại cho anh những quả ngọt là sự đón nhận của khán giả, thậm chí trong từng thể loại âm nhạc khác nhau.</p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:center\"><span style=\"font-size:20px\"><strong>HOTLINE ĐẶT VÉ: 091-333-2198</strong></span></p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\"><img src=\"https://media.ticketbox.vn/agenda/2015/12/14/0714C1.jpg\" /></p>\n\n  <p style=\"text-align:justify\"> </p>\n\n                          </div>\n                          \n                          <!--/agenda-->\n                      </div>\n                  </div>\n\n"], ["category_id", 1], ["name", "Cảm ơn Đời - Live Concert Đan Trường"], ["created_at", "2017-06-29 16:25:44.500699"], ["updated_at", "2017-06-29 16:25:44.500699"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.2ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 500000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 500000], ["name", "Vé loại A"], ["max_quantity", 10], ["created_at", "2017-06-29 16:25:44.502957"], ["updated_at", "2017-06-29 16:25:44.502957"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ticket_types" SET "event_id" = $1, "updated_at" = $2 WHERE "ticket_types"."id" = $3[0m  [["event_id", 2], ["updated_at", "2017-06-29 16:25:44.505482"], ["id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.2ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 300000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 300000], ["name", "Vé loại B"], ["max_quantity", 50], ["created_at", "2017-06-29 16:25:44.507197"], ["updated_at", "2017-06-29 16:25:44.507197"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "ticket_types" SET "event_id" = $1, "updated_at" = $2 WHERE "ticket_types"."id" = $3[0m  [["event_id", 2], ["updated_at", "2017-06-29 16:25:44.509295"], ["id", 4]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.2ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 200000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 200000], ["name", "Vé loại C"], ["max_quantity", 100], ["created_at", "2017-06-29 16:25:44.510701"], ["updated_at", "2017-06-29 16:25:44.510701"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "ticket_types" SET "event_id" = $1, "updated_at" = $2 WHERE "ticket_types"."id" = $3[0m  [["event_id", 2], ["updated_at", "2017-06-29 16:25:44.512534"], ["id", 5]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.2ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 150000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 150000], ["name", "Vé loại D"], ["max_quantity", 200], ["created_at", "2017-06-29 16:25:44.513892"], ["updated_at", "2017-06-29 16:25:44.513892"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "ticket_types" SET "event_id" = $1, "updated_at" = $2 WHERE "ticket_types"."id" = $3[0m  [["event_id", 2], ["updated_at", "2017-06-29 16:25:44.515853"], ["id", 6]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRegion Load (0.1ms)[0m  [1m[34mSELECT  "regions".* FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Ha Noi"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVenue Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "venues" WHERE "venues"."name" = $1 LIMIT $2[0m  [["name", "Gap Yolo Hanoi"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "venues" ("name", "full_address", "region_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gap Yolo Hanoi"], ["full_address", "1B Quốc Tử Giám, Quận Đống Đa, Hà Nội"], ["region_id", 2], ["created_at", "2017-06-29 16:25:44.518175"], ["updated_at", "2017-06-29 16:25:44.518175"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Entertainment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = $1 LIMIT $2[0m  [["name", "Merry Christmas Never Alone"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "events" ("starts_at", "ends_at", "venue_id", "hero_image_url", "extended_html_description", "category_id", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["starts_at", "2015-12-24 13:00:00"], ["ends_at", "2015-12-24 16:00:00"], ["venue_id", 3], ["hero_image_url", "https://media.ticketbox.vn/eventcover/2015/12/12/78534E.jpg?w=1040&maxheight=400&mode=crop&anchor=topcenter"], ["extended_html_description", "         <p>\n  <span style=\"background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,sans-serif; font-size:14px\">* Bạn một m&igrave;nh, bạn FA ?</span><br />\n  <span style=\"background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,sans-serif; font-size:14px\">* Bạn chưa biết l&agrave;m g&igrave; v&agrave;o tối thứ năm cuối th&aacute;ng 12 n&agrave;y ?</span><br />\n  <span style=\"background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,sans-serif; font-size:14px\">* Đ&oacute; l&agrave; đ&ecirc;m gi&aacute;ng sinh, bạn muốn một buổi tối vui vẻ ?</span><br />\n  <span style=\"background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,sans-serif; font-size:14px\">* Bạn muốn nghe những b&agrave;i h&aacute;t hay l&atilde;ng mạn mộc mạc b&ecirc;n c&acirc;y đ&agrave;n guitar ?</span><br />\n  <span style=\"background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,sans-serif; font-size:14px\">* Buffet với tr&agrave;, b&aacute;nh kẹo ngon, tr&aacute;i c&acirc;y tươi đa dạng, phong ph&uacute; với những người bạn mới th&uacute; vị ?</span><br />\n  <span style=\"background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,sans-serif; font-size:14px\">*Được nhận những m&oacute;n qu&agrave; bất ngờ từ &ocirc;ng gi&agrave; Noel :D ?</span><br />\n  <br />\n  <span style=\"background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,sans-serif; font-size:14px\">Nếu bạn cảm thấy thoải m&aacute;i, hứng khởi về những điều tr&ecirc;n bạn h&atilde;y đến với chương tr&igrave;nh Merry Christmas Never Alone do Gap Yolo Hanoi tổ chức tại 1B Quốc Tử Gi&aacute;m, ngay trung t&acirc;m H&agrave; Nội, tr&ecirc;n tầng 5 ngắm phố phường đ&ocirc;ng đ&uacute;c, nhộn nhịp qua lại v&agrave; bầu trời thanh b&igrave;nh H&agrave; Nội.</span><br />\n  <br />\n  <span style=\"background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,sans-serif; font-size:14px\">Gi&aacute; v&eacute; chỉ 99K/ v&eacute;/ người (đ&atilde; bao gồm v&eacute; giữ xe)</span><br />\n  <br />\n  <span style=\"background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,sans-serif; font-size:14px\">Ngo&agrave;i ra c&ograve;n nhiều Voucher tặng bạn v&ocirc; c&ugrave;ng hấp dẫn :D</span></p>\n\n                        </div>\n                        \n"], ["category_id", 1], ["name", "Merry Christmas Never Alone"], ["created_at", "2017-06-29 16:25:44.520704"], ["updated_at", "2017-06-29 16:25:44.520704"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.1ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 99000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 99000], ["name", "General"], ["max_quantity", 1000], ["created_at", "2017-06-29 16:25:44.522365"], ["updated_at", "2017-06-29 16:25:44.522365"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "ticket_types" SET "event_id" = $1, "updated_at" = $2 WHERE "ticket_types"."id" = $3[0m  [["event_id", 3], ["updated_at", "2017-06-29 16:25:44.524494"], ["id", 7]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3892345956427423530);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3892345956427423530)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Ho Chi Minh"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Ha Noi"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Binh Thuan"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Da Nang"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Lam Dong"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Entertainment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Learning"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Everything Else"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT  "regions".* FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Lam Dong"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVenue Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "venues" WHERE "venues"."name" = $1 LIMIT $2[0m  [["name", "Da Lat City"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Everything Else"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = $1 LIMIT $2[0m  [["name", "Việt Nam Thử Thách Chiến Thắng"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.3ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 500000], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 500000], ["name", "2016 Việt Nam Thử Thách Chiến Thắng dành cho những tay đua đăng kí sớm."], ["max_quantity", 95], ["created_at", "2017-06-29 16:25:56.018789"], ["updated_at", "2017-06-29 16:25:56.018789"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.2ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 2000000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 2000000], ["name", "Việt Nam Thử Thách Chiến Thắng ( Giá chính thức)"], ["max_quantity", 5], ["created_at", "2017-06-29 16:25:56.026945"], ["updated_at", "2017-06-29 16:25:56.026945"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT  "regions".* FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Ho Chi Minh"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVenue Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "venues" WHERE "venues"."name" = $1 LIMIT $2[0m  [["name", "Sân vận động quân khu 7"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Entertainment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = $1 LIMIT $2[0m  [["name", "Cảm ơn Đời - Live Concert Đan Trường"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.2ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 500000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 500000], ["name", "Vé loại A"], ["max_quantity", 10], ["created_at", "2017-06-29 16:25:56.036552"], ["updated_at", "2017-06-29 16:25:56.036552"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.3ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 300000], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 300000], ["name", "Vé loại B"], ["max_quantity", 50], ["created_at", "2017-06-29 16:25:56.039797"], ["updated_at", "2017-06-29 16:25:56.039797"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.2ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 200000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 200000], ["name", "Vé loại C"], ["max_quantity", 100], ["created_at", "2017-06-29 16:25:56.042988"], ["updated_at", "2017-06-29 16:25:56.042988"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.2ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 150000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 150000], ["name", "Vé loại D"], ["max_quantity", 200], ["created_at", "2017-06-29 16:25:56.045547"], ["updated_at", "2017-06-29 16:25:56.045547"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT  "regions".* FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Ha Noi"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVenue Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "venues" WHERE "venues"."name" = $1 LIMIT $2[0m  [["name", "Gap Yolo Hanoi"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Entertainment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = $1 LIMIT $2[0m  [["name", "Merry Christmas Never Alone"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.1ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 99000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 99000], ["name", "General"], ["max_quantity", 1000], ["created_at", "2017-06-29 16:25:56.052430"], ["updated_at", "2017-06-29 16:25:56.052430"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3892345956427423530);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3892345956427423530)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2017-06-29 23:26:14 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/_card.html.erb (3.2ms)
+  Rendered events/_card.html.erb (0.2ms)
+  Rendered events/_card.html.erb (0.2ms)
+  Rendered events/index.html.erb within layouts/application (4200.0ms)
+Completed 200 OK in 4386ms (Views: 4364.8ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/application.self-029a99f8bd697f21ac1a643d0c1ff2167eb81c20419617f1ccc5b524387cb1b6.css?body=1" for 127.0.0.1 at 2017-06-29 23:26:19 +0700
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-29 23:26:19 +0700
+Started GET "/assets/tickets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-29 23:26:19 +0700
+Started GET "/assets/open-sans/OpenSans-Regular-webfont-7d161ab06fa3d662498d87f84e612acda5b78887d586d030357be22d4ae9afc7.woff" for 127.0.0.1 at 2017-06-29 23:26:19 +0700
+Started GET "/assets/open-sans/OpenSans-Bold-webfont-87f7d13b1abfab993c9d5f5e5c0719222db257832f934bb3d9e822098f609224.woff" for 127.0.0.1 at 2017-06-29 23:26:19 +0700
+Started GET "/assets/color-me-run-4f54d48bccce706af28ffa1c65e86014b942ae5a855bc857c28f8bd571f7058f.jpg" for 127.0.0.1 at 2017-06-29 23:26:19 +0700
+Started GET "/" for 127.0.0.1 at 2017-06-29 23:27:11 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/_card.html.erb (0.8ms)
+  Rendered events/_card.html.erb (0.1ms)
+  Rendered events/_card.html.erb (0.2ms)
+  Rendered events/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-29 23:27:13 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/_card.html.erb (0.5ms)
+  Rendered events/_card.html.erb (0.1ms)
+  Rendered events/_card.html.erb (0.1ms)
+  Rendered events/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-29 23:27:13 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/_card.html.erb (1.1ms)
+  Rendered events/_card.html.erb (0.2ms)
+  Rendered events/_card.html.erb (0.2ms)
+  Rendered events/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 94ms (Views: 91.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-29 23:27:14 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/_card.html.erb (0.8ms)
+  Rendered events/_card.html.erb (0.1ms)
+  Rendered events/_card.html.erb (0.1ms)
+  Rendered events/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 70ms (Views: 67.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-29 23:27:14 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/_card.html.erb (0.5ms)
+  Rendered events/_card.html.erb (0.1ms)
+  Rendered events/_card.html.erb (0.1ms)
+  Rendered events/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 63ms (Views: 59.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2017-06-30 00:08:05 +0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mTicketType Load (0.3ms)[0m  [1m[34mSELECT "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" = $1[0m  [["event_id", 1]]
+  [1m[36mVenue Load (0.3ms)[0m  [1m[34mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered events/show.html.erb within layouts/application (50.2ms)
+Completed 200 OK in 111ms (Views: 92.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/shadow-top-82576f067ef2affbd581cd853fbc9a95899fa9d3ff7d7f06a02e9b49b71107b7.png" for 127.0.0.1 at 2017-06-30 00:08:05 +0700
+Started GET "/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" for 127.0.0.1 at 2017-06-30 00:08:05 +0700
+Started GET "/" for 127.0.0.1 at 2017-06-30 00:08:13 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/_card.html.erb (0.8ms)
+  Rendered events/_card.html.erb (0.1ms)
+  Rendered events/_card.html.erb (0.1ms)
+  Rendered events/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 62ms (Views: 59.1ms | ActiveRecord: 0.6ms)
+
+

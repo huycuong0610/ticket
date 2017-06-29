@@ -13,4 +13,27 @@ class Event < ActiveRecord::Base
   def self.published
     where.not(published_at: nil)
   end
+
+  def venue_name
+  	venue ? venue.name : nil
+  end
+
+  def self.search(search)
+  	where("name ILIKE?", "%#{search}%")
+  end
+
+  def self.feature_events
+  	 where("starts_at >= ?", DateTime.now)
+  end
+
+  def self.own_events(user)
+    where("user_id = ?", user.id)
+  end
+
+  def make_publish
+    if self.ticket_types.count >= 1
+      self.publish = true
+      self.save!
+    end
+  end
 end
