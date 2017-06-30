@@ -7,12 +7,14 @@
   </div>
 </div>
 <div class="container-fluid events-list">
-    <% @events.in_groups_of(3) do |g| %>
-      <div class="row">
-        <% g.compact.each do |e| %>
+
+<div class="row">
+  <div class="col m10 offset-m1">
+   <% @events.in_groups_of(3) do |g| %>
+     <% g.compact.each do |e| %>
             <%= render partial: 'card', locals: {event: e} %>
         <% end %>
-      </div>  
-    <% end %>
+         <% end %>
   </div>
+</div>
 </div>
