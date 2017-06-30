@@ -475,3 +475,1662 @@ Processing by EventsController#index as HTML
 Completed 200 OK in 62ms (Views: 59.1ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:01:59 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (24.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (25.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (ends_at > '2017-06-30 17:01:59.647400') AND ("events"."published_at" IS NOT NULL)[0m
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (ends_at > '2017-06-30 17:01:59.647400') AND ("events"."published_at" IS NOT NULL)[0m
+NoMethodError (undefined method `decorate' for #<Event::ActiveRecord_Relation:0x007fe7be2638f8>
+Did you mean?  create):
+  
+app/controllers/events_controller.rb:8:in `index'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (ends_at > '2017-06-30 17:01:59.647400') AND ("events"."published_at" IS NOT NULL)[0m
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.5ms)
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:04:14 +0700
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (ends_at > '2017-06-30 17:04:14.653712') AND ("events"."published_at" IS NOT NULL)[0m
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (ends_at > '2017-06-30 17:04:14.653712') AND ("events"."published_at" IS NOT NULL)[0m
+NoMethodError (undefined method `decorate' for #<Event::ActiveRecord_Relation:0x007fe7c293d0d0>
+Did you mean?  create):
+  
+app/controllers/events_controller.rb:8:in `index'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (ends_at > '2017-06-30 17:04:14.653712') AND ("events"."published_at" IS NOT NULL)[0m
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.9ms)
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:05:58 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (ends_at > '2017-06-30 17:05:58.481075') AND ("events"."published_at" IS NOT NULL)[0m
+  Rendered events/index.html.erb within layouts/application (151.6ms)
+Completed 500 Internal Server Error in 162ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column events.published_at does not exist
+LINE 1: ...ERE (ends_at > '2017-06-30 17:05:58.481075') AND ("events"."...
+                                                             ^
+: SELECT "events".* FROM "events" WHERE (ends_at > '2017-06-30 17:05:58.481075') AND ("events"."published_at" IS NOT NULL)):
+     7:   </div>
+     8: </div>
+     9: <div class="container-fluid events-list">
+    10:     <% @events.in_groups_of(3) do |g| %>
+    11:       <div class="row">
+    12:         <% g.compact.each do |e| %>
+    13:             <%= render partial: 'card', locals: {event: e} %>
+  
+app/views/events/index.html.erb:10:in `_app_views_events_index_html_erb__4193644979883877379_70316656516920'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.4ms)
+Started GET "/events/1" for 127.0.0.1 at 2017-07-01 00:09:29 +0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (23.9ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 49.3ms)
+
+
+  
+NoMethodError (undefined method `upcoming?' for #<Event:0x007fe7c3821678>):
+  
+app/controllers/events_controller.rb:17:in `show'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.8ms)
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:09:31 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (ends_at > '2017-06-30 17:09:31.062717') AND ("events"."published_at" IS NOT NULL)[0m
+  Rendered events/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column events.published_at does not exist
+LINE 1: ...ERE (ends_at > '2017-06-30 17:09:31.062717') AND ("events"."...
+                                                             ^
+: SELECT "events".* FROM "events" WHERE (ends_at > '2017-06-30 17:09:31.062717') AND ("events"."published_at" IS NOT NULL)):
+     7:   </div>
+     8: </div>
+     9: <div class="container-fluid events-list">
+    10:     <% @events.in_groups_of(3) do |g| %>
+    11:       <div class="row">
+    12:         <% g.compact.each do |e| %>
+    13:             <%= render partial: 'card', locals: {event: e} %>
+  
+app/views/events/index.html.erb:10:in `_app_views_events_index_html_erb__4193644979883877379_70316689521860'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.0ms)
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:09:32 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (ends_at > '2017-06-30 17:09:32.211621') AND ("events"."published_at" IS NOT NULL)[0m
+  Rendered events/index.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column events.published_at does not exist
+LINE 1: ...ERE (ends_at > '2017-06-30 17:09:32.211621') AND ("events"."...
+                                                             ^
+: SELECT "events".* FROM "events" WHERE (ends_at > '2017-06-30 17:09:32.211621') AND ("events"."published_at" IS NOT NULL)):
+     7:   </div>
+     8: </div>
+     9: <div class="container-fluid events-list">
+    10:     <% @events.in_groups_of(3) do |g| %>
+    11:       <div class="row">
+    12:         <% g.compact.each do |e| %>
+    13:             <%= render partial: 'card', locals: {event: e} %>
+  
+app/views/events/index.html.erb:10:in `_app_views_events_index_html_erb__4193644979883877379_70316637438880'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (54.1ms)
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:10:25 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (ends_at > '2017-06-30 17:10:25.999919') AND ("events"."published_at" IS NOT NULL)[0m
+  Rendered events/index.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column events.published_at does not exist
+LINE 1: ...ERE (ends_at > '2017-06-30 17:10:25.999919') AND ("events"."...
+                                                             ^
+: SELECT "events".* FROM "events" WHERE (ends_at > '2017-06-30 17:10:25.999919') AND ("events"."published_at" IS NOT NULL)):
+     7:   </div>
+     8: </div>
+     9: <div class="container-fluid events-list">
+    10:     <% @events.in_groups_of(3) do |g| %>
+    11:       <div class="row">
+    12:         <% g.compact.each do |e| %>
+    13:             <%= render partial: 'card', locals: {event: e} %>
+  
+app/views/events/index.html.erb:10:in `_app_views_events_index_html_erb__4193644979883877379_70316657762800'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.3ms)
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:12:42 +0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController::SessionsHelper):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/events_controller.rb:21:in `<top (required)>'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (9.6ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.9ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (96.9ms)
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:12:50 +0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController::SessionsHelper):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/events_controller.rb:21:in `<top (required)>'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (6.5ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.6ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (83.6ms)
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:13:21 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (uninitialized constant ApplicationController::SessionsHelper):
+  
+app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/events_controller.rb:21:in `<top (required)>'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [20 times] (5.8ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.6ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.3ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (94.9ms)
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:14:17 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (starts_at >= '2017-06-30 17:14:17.646711')[0m
+  Rendered events/index.html.erb within layouts/application (129.1ms)
+Completed 500 Internal Server Error in 1363ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: toastr.
+Load paths:
+  /Users/macOS/projects/ticket/app/assets/images
+  /Users/macOS/projects/ticket/app/assets/javascripts
+  /Users/macOS/projects/ticket/app/assets/stylesheets
+  /Users/macOS/projects/ticket/vendor/assets/javascripts
+  /Users/macOS/projects/ticket/vendor/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/font-kit-rails-1.2.0/app/assets/fonts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/font-kit-rails-1.2.0/app/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/font-awesome-rails-4.7.0.0/app/assets/fonts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/font-awesome-rails-4.7.0.0/app/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/rails-assets-tether-1.3.7/app/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/rails-assets-tether-1.3.7/app/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/fonts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actioncable-5.0.4/lib/assets/compiled
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/fonts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/images
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/bootstrap-4.0.0.alpha5/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/bootstrap-4.0.0.alpha5/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/bootstrap-4.0.0.alpha5/assets/stylesheets):
+    2: <html>
+    3: <head>
+    4:   <title>CsTemplate</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  
+app/assets/stylesheets/application.scss:2
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___963243901780559020_70272307253600'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.2ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (63.1ms)
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:15:26 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (starts_at >= '2017-06-30 17:15:26.978009')[0m
+  Rendered events/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 464ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: toastr.
+Load paths:
+  /Users/macOS/projects/ticket/app/assets/images
+  /Users/macOS/projects/ticket/app/assets/javascripts
+  /Users/macOS/projects/ticket/app/assets/stylesheets
+  /Users/macOS/projects/ticket/vendor/assets/javascripts
+  /Users/macOS/projects/ticket/vendor/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/font-kit-rails-1.2.0/app/assets/fonts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/font-kit-rails-1.2.0/app/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/font-awesome-rails-4.7.0.0/app/assets/fonts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/font-awesome-rails-4.7.0.0/app/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/rails-assets-tether-1.3.7/app/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/rails-assets-tether-1.3.7/app/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/fonts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actioncable-5.0.4/lib/assets/compiled
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/fonts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/images
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/bootstrap-4.0.0.alpha5/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/bootstrap-4.0.0.alpha5/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/bootstrap-4.0.0.alpha5/assets/stylesheets):
+    2: <html>
+    3: <head>
+    4:   <title>CsTemplate</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  
+app/assets/stylesheets/application.scss:2
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___963243901780559020_70272299653360'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.8ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (63.3ms)
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:15:48 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (starts_at >= '2017-06-30 17:15:48.987171')[0m
+  Rendered events/index.html.erb within layouts/application (118.8ms)
+Completed 500 Internal Server Error in 2128ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery.remotipart' with type 'application/javascript'
+Checked in these paths: 
+  /Users/macOS/projects/ticket/app/assets/images
+  /Users/macOS/projects/ticket/app/assets/javascripts
+  /Users/macOS/projects/ticket/app/assets/stylesheets
+  /Users/macOS/projects/ticket/vendor/assets/javascripts
+  /Users/macOS/projects/ticket/vendor/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/toastr-rails-1.0.3/vendor/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/font-kit-rails-1.2.0/app/assets/fonts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/font-kit-rails-1.2.0/app/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/font-awesome-rails-4.7.0.0/app/assets/fonts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/font-awesome-rails-4.7.0.0/app/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/rails-assets-tether-1.3.7/app/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/rails-assets-tether-1.3.7/app/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/fonts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actioncable-5.0.4/lib/assets/compiled
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/javascripts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/fonts
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/materialize-sass-0.98.2/app/assets/images
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/bootstrap-4.0.0.alpha5/assets/stylesheets
+  /Users/macOS/.rvm/gems/ruby-2.4.0/gems/bootstrap-4.0.0.alpha5/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>CsTemplate</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___653934660573492567_70355676726940'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.5ms)
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:16:44 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (starts_at >= '2017-06-30 17:16:44.552731')[0m
+  Rendered events/index.html.erb within layouts/application (117.9ms)
+Completed 500 Internal Server Error in 2902ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `sessions_new_path' for #<#<Class:0x007f99f7cbf708>:0x007f99f8cc2d80>
+Did you mean?  sessions_path):
+    17:         </li>
+    18:       <% else %>
+    19:         <li class="nav-item">
+    20:           <%= link_to "Log In", sessions_new_path, class: "nav-link" %>
+    21:         </li>
+    22:         <li class="nav-item">
+    23:           <%= link_to "Sign Up", new_user_path, class: "nav-link" %>
+  
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___258154357213812858_70149650769580'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.0ms)
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:18:40 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (starts_at >= '2017-06-30 17:18:40.734057')[0m
+  Rendered events/index.html.erb within layouts/application (122.9ms)
+Completed 200 OK in 366ms (Views: 346.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.self-374056274ce47021c6aa78802e3b9e86e0097e6f80648c8a065275e57c117314.css?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/jquery.remotipart.self-1660679e325ee534ce863e680eb6ad0bc9739d262594dc1337a2171e5c19c939.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/jquery.iframe-transport.self-b58640d2146e10a028d4aec4f1c6e624305f8b5edd02cbb5ca77f7fb56b4d976.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/jquery.easing.1.3.self-0170bc905fbddc075a56bdccce1be6a58f3713a14137b607ba9bd9f96fd7835f.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/initial.self-79f269ead2aeaa809299033919f9128fa0d9700d0248cad0dcd6442ce43dc389.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/velocity.min.self-5adbb81af5c205a959e06198156b4b31fcd57f02c592e3fb096d7b74e8f401a6.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/animation.self-6511a6dd531771f6d159fe702740dad70a4eac4af9fb54f501030228ddd8ba26.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/hammer.min.self-bf8bdb0953b1a135f96716e362e1f7a8e64168c914fa77ca31973bb70e57a731.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/jquery.hammer.self-73fd69102f356b9abfc9ee242b19895f62454f42cfcfa1f066be71d2c8f41c7a.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/global.self-a482570d9bc50f724f12fd68a3ac8d5e4eda8914199a82ccc5e9369444960b10.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/collapsible.self-a3874bd22bf4465a452741ca14ecbcb79889b59c2f9b5ab39191cb45933ca2e0.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/dropdown.self-1052ed0d52eb4081d3c73056508abe424e49549576e34a557165a1bfe28bd646.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/parallax.self-96dabbb849f200445babdc97458150e480d66ca5f074b7e37389355aed6e852a.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/modal.self-3f163fd18f339c239cfab79b424ed511be77c31c626bf205a32433d1bbd71838.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/materialbox.self-b62a01d4ed31eb5b738056249fa028fd4643813a086096f0ade0397ed17f61e7.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/tabs.self-f1ac76304dc37b2f7065d87d0a94e717e085dc2a37d1a8c3f051ce30b47e9393.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/tooltip.self-629f9253653f6309f04e90800705572857132792237c3aa94b1ccaded7b36058.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/waves.self-26e9b9cfaa9ccbc292ed510f654bd279d69695f5337a14c9800b36e92f96735b.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/toasts.self-b9775a23bdcb840c28f160ffc8ddc13caaa62c810a0c18e8df5be750888acc69.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/sideNav.self-d41c2b848bd7b95be64b90b34f56267ff6546de9aa648a35b4be99239981730b.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/scrollspy.self-f27d527cf793e4f03d72f5eefa1d6bbdaff76ddaac7ac46f5627246e609b4e05.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/slider.self-102c4a39c970cbfb2ce6831b44840b1d00b07642df9d78c95c27835ce762c28d.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/forms.self-c71f0991097af680acc047c22f517761e84cb533f5dadfbf1a4cbec8d418d1da.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/cards.self-b78d84331c3b4ecca59db28b271bfd2cdc62d0703861ccbd13284e117b00f591.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/chips.self-fbef9eb7d3f0c2ec3a9ac0f81628ba88ab0f41058f7acdc2e1bb5070fcb2720e.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/pushpin.self-b6217071e4b33cf2ce5742d81537d6f36b046c5f8fd115a01e4239cff1acd598.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/buttons.self-b27d1a29f9142ca06ded6dee42c8668e6d7f3d5104f6d5dd04b8eef1afb7823d.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/scrollFire.self-cadadb47b9b63f1a44d01646729563a271790d07dc9864140a3f6da9d918bfd3.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/transitions.self-4c9d7cc62efc88c6468e448e930d13f7244479f748d362b270dc05fdb2a4c19c.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/date_picker/picker.date.self-5924b278beda2df8570f137f72b37e2d0f516acbc11a0994d1abb74380f078ef.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/date_picker/picker.self-7a9d1216fe1172f8e8fd78fb86cfd4da25c909ebd6983cba5da20817d437d92b.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/character_counter.self-387880abe7a9c92dd8fd1d534ebf228a457f00938919adf00d5598f8fe45e945.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/carousel.self-74ecce1dbf05d5a1573e3638d357167981a65defeb489247258179fe4495babb.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize/tapTarget.self-b0f7198fb7da4ab1232929dab0139d2f3b6528d6e4b9e42214f728ef16f83e0d.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/materialize-sprockets.self-04d70fb8a9450566c66d9a39ec4abe92ea4871475b0e270b5b27736d815d5f79.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/assets/toastr.self-cd4d0b085c13a2d904a1272152dc0645a9261e6ca5cfc429a786b3e6465406df.js?body=1" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+Started GET "/images/color-me-run.jpg" for 127.0.0.1 at 2017-07-01 00:18:41 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/color-me-run.jpg"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [31 times] (8.1ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.9ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (87.8ms)
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:18:46 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (starts_at >= '2017-06-30 17:18:46.234479')[0m
+  Rendered events/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 79ms (Views: 76.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/color-me-run.jpg" for 127.0.0.1 at 2017-07-01 00:18:46 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/color-me-run.jpg"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [31 times] (8.1ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (80.8ms)
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:18:47 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (starts_at >= '2017-06-30 17:18:47.232622')[0m
+  Rendered events/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 74ms (Views: 71.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:18:47 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (starts_at >= '2017-06-30 17:18:47.851786')[0m
+  Rendered events/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 80ms (Views: 77.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:19:18 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (starts_at >= '2017-06-30 17:19:18.242710')[0m
+  Rendered events/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 71ms (Views: 69.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/color-me-run.jpg" for 127.0.0.1 at 2017-07-01 00:19:18 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/color-me-run.jpg"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [31 times] (7.7ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (79.3ms)
+Started GET "/?utf8=%E2%9C%93&search=1" for 127.0.0.1 at 2017-07-01 00:19:45 +0700
+Processing by EventsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"1"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (2.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (name ILIKE'%1%')[0m
+  Rendered events/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 81ms (Views: 77.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/images/color-me-run.jpg" for 127.0.0.1 at 2017-07-01 00:19:45 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/color-me-run.jpg"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [31 times] (6.9ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (82.9ms)
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:19:49 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (starts_at >= '2017-06-30 17:19:49.307032')[0m
+  Rendered events/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 74ms (Views: 71.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/color-me-run.jpg" for 127.0.0.1 at 2017-07-01 00:19:49 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/color-me-run.jpg"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [31 times] (6.5ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (78.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (17.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (188.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "CoderTicket_development"[0m
+  [1m[35m (174.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "CoderTicket_test"[0m
+  [1m[35m (431.7ms)[0m  [1m[35mCREATE DATABASE "CoderTicket_development" ENCODING = 'unicode'[0m
+  [1m[35m (377.9ms)[0m  [1m[35mCREATE DATABASE "CoderTicket_test" ENCODING = 'unicode'[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3892345956427423530);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRegions (20151214175835)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateRegions < ActiveRecord::Migration[4.2] (called from block in execute at /Users/macOS/.rvm/gems/ruby-2.4.0@global/gems/rake-12.0.0/lib/rake/task.rb:250)
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE TABLE "regions" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20151214175835"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateVenues (20151214175903)
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateVenues < ActiveRecord::Migration[4.2] (called from block in execute at /Users/macOS/.rvm/gems/ruby-2.4.0@global/gems/rake-12.0.0/lib/rake/task.rb:250)
+  [1m[35m (15.4ms)[0m  [1m[35mCREATE TABLE "venues" ("id" serial primary key, "name" character varying, "full_address" character varying, "region_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_631e818549"
+FOREIGN KEY ("region_id")
+  REFERENCES "regions" ("id")
+)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_venues_on_region_id" ON "venues"  ("region_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20151214175903"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategories (20151214180054)
+  [1m[35m (5.8ms)[0m  [1m[35mBEGIN[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateCategories < ActiveRecord::Migration[4.2] (called from block in execute at /Users/macOS/.rvm/gems/ruby-2.4.0@global/gems/rake-12.0.0/lib/rake/task.rb:250)
+  [1m[35m (13.6ms)[0m  [1m[35mCREATE TABLE "categories" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20151214180054"]]
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEvents (20151214180128)
+  [1m[35m (6.0ms)[0m  [1m[35mBEGIN[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateEvents < ActiveRecord::Migration[4.2] (called from block in execute at /Users/macOS/.rvm/gems/ruby-2.4.0@global/gems/rake-12.0.0/lib/rake/task.rb:250)
+  [1m[35m (17.0ms)[0m  [1m[35mCREATE TABLE "events" ("id" serial primary key, "starts_at" timestamp, "ends_at" timestamp, "venue_id" integer, "hero_image_url" character varying, "extended_html_description" text, "category_id" integer, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_f476266cf4"
+FOREIGN KEY ("venue_id")
+  REFERENCES "venues" ("id")
+, CONSTRAINT "fk_rails_fd5598a81d"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_venue_id" ON "events"  ("venue_id")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_category_id" ON "events"  ("category_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20151214180128"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTicketTypes (20151215104433)
+  [1m[35m (5.3ms)[0m  [1m[35mBEGIN[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateTicketTypes < ActiveRecord::Migration[4.2] (called from block in execute at /Users/macOS/.rvm/gems/ruby-2.4.0@global/gems/rake-12.0.0/lib/rake/task.rb:250)
+  [1m[35m (14.0ms)[0m  [1m[35mCREATE TABLE "ticket_types" ("id" serial primary key, "event_id" integer, "price" integer, "name" character varying, "max_quantity" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_3f5bd3dab9"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+)[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE  INDEX  "index_ticket_types_on_event_id" ON "ticket_types"  ("event_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20151215104433"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-06-30 17:21:47.917216"], ["updated_at", "2017-06-30 17:21:47.917216"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3892345956427423530)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Ho Chi Minh"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "regions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ho Chi Minh"], ["created_at", "2017-06-30 17:21:47.986745"], ["updated_at", "2017-06-30 17:21:47.986745"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Ha Noi"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "regions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ha Noi"], ["created_at", "2017-06-30 17:21:47.999101"], ["updated_at", "2017-06-30 17:21:47.999101"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Binh Thuan"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "regions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Binh Thuan"], ["created_at", "2017-06-30 17:21:48.007858"], ["updated_at", "2017-06-30 17:21:48.007858"]]
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Da Nang"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "regions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Da Nang"], ["created_at", "2017-06-30 17:21:48.015906"], ["updated_at", "2017-06-30 17:21:48.015906"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Lam Dong"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "regions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lam Dong"], ["created_at", "2017-06-30 17:21:48.018443"], ["updated_at", "2017-06-30 17:21:48.018443"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Entertainment"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Entertainment"], ["created_at", "2017-06-30 17:21:48.028834"], ["updated_at", "2017-06-30 17:21:48.028834"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Learning"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Learning"], ["created_at", "2017-06-30 17:21:48.030849"], ["updated_at", "2017-06-30 17:21:48.030849"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Everything Else"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Everything Else"], ["created_at", "2017-06-30 17:21:48.032756"], ["updated_at", "2017-06-30 17:21:48.032756"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT  "regions".* FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Lam Dong"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVenue Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "venues" WHERE "venues"."name" = $1 LIMIT $2[0m  [["name", "Da Lat City"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "venues" ("name", "full_address", "region_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Da Lat City"], ["full_address", "Ngoc Phat Hotel 10 Hồ Tùng Mậu Phường 3, Thành phố Đà Lạt, Lâm Đồng, Thành Phố Đà Lạt, Lâm Đồng"], ["region_id", 5], ["created_at", "2017-06-30 17:21:48.054158"], ["updated_at", "2017-06-30 17:21:48.054158"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Everything Else"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = $1 LIMIT $2[0m  [["name", "Việt Nam Thử Thách Chiến Thắng"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("starts_at", "ends_at", "venue_id", "hero_image_url", "extended_html_description", "category_id", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["starts_at", "2017-03-11 00:00:00"], ["ends_at", "2017-03-13 08:00:00"], ["venue_id", 1], ["hero_image_url", "https://media.ticketbox.vn/eventcover/2015/10/25/C6A1A5.jpg?w=1040&maxheight=400&mode=crop&anchor=topcenter"], ["extended_html_description", "    <p style=\"text-align:center\"><span style=\"font-size:20px\">VIỆT NAM THỬ THÁCH CHIẾN THẮNG 2016</span></p>\n    <p style=\"text-align:center\"><span style=\"font-size:20px\">Giải đua xe đạp địa hình 11-13/03/2016</span></p>\n    <p style=\"text-align:center\"><span style=\"font-size:16px\"><span style=\"font-family:arial,helvetica,sans-serif\">Việt Nam Th</span>ử Thách Chiến Thắng là giải đua xe đạp địa hình được tổ chức như một sự tri ân, và cũng nhằm thỏa mãn lòng đam mẹ của những người yêu xe đạp địa hình nói chung, cũng như cho những ai đóng góp vào môn thể thao đua xe đạp tại thành phố Hồ Chí Minh. Cuộc đua diễn ra ở thành phố cao nguyên hùng vĩ Đà Lạt, với độ cao 1,500m (4,900ft) so với mặt nước biển. Đến với đường đua này ngoài việc tận hưởng cảnh quan nơi đây, bạn còn có cơ hội biết thêm về nền văn hóa của thành phố này. </span></p>\n    <p style=\"text-align:center\"><span style=\"font-size:16px\">Hãy cùng với hơn 350 tay đua trải nghiệm 04 lộ trình đua tuyệt vời diễn ra trong 03 ngày tại Đà Lạt và bạn sẽ có những kỉ niệm không bao giờ quên!</span></p>\n    <p style=\"text-align:center\"><span style=\"font-size:16px\">Để biết thêm thông tin chi tiết và tạo thêm hứng khởi cho cuộc đua 2016, vui lòng ghé thăm trang web</span></p>\n    <p style=\"text-align:center\"><span style=\"font-size:16px\"><strong><span style=\"background-color:transparent; color:rgb(0, 0, 0)\">www.vietnamvictorychallenge.com. </span></strong></span></p>\n"], ["category_id", 3], ["name", "Việt Nam Thử Thách Chiến Thắng"], ["created_at", "2017-06-30 17:21:48.079862"], ["updated_at", "2017-06-30 17:21:48.079862"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.3ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 500000], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 500000], ["name", "2016 Việt Nam Thử Thách Chiến Thắng dành cho những tay đua đăng kí sớm."], ["max_quantity", 95], ["created_at", "2017-06-30 17:21:48.095666"], ["updated_at", "2017-06-30 17:21:48.095666"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "ticket_types" SET "event_id" = $1, "updated_at" = $2 WHERE "ticket_types"."id" = $3[0m  [["event_id", 1], ["updated_at", "2017-06-30 17:21:48.108486"], ["id", 1]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.3ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 2000000], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 2000000], ["name", "Việt Nam Thử Thách Chiến Thắng ( Giá chính thức)"], ["max_quantity", 5], ["created_at", "2017-06-30 17:21:48.117090"], ["updated_at", "2017-06-30 17:21:48.117090"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "ticket_types" SET "event_id" = $1, "updated_at" = $2 WHERE "ticket_types"."id" = $3[0m  [["event_id", 1], ["updated_at", "2017-06-30 17:21:48.126106"], ["id", 2]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT  "regions".* FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Ho Chi Minh"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVenue Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "venues" WHERE "venues"."name" = $1 LIMIT $2[0m  [["name", "Sân vận động quân khu 7"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "venues" ("name", "full_address", "region_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Sân vận động quân khu 7"], ["full_address", "202 Hoàng Văn Thụ, Quận Tân Bình, Hồ Chí Minh"], ["region_id", 1], ["created_at", "2017-06-30 17:21:48.134916"], ["updated_at", "2017-06-30 17:21:48.134916"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Entertainment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = $1 LIMIT $2[0m  [["name", "Cảm ơn Đời - Live Concert Đan Trường"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "events" ("starts_at", "ends_at", "venue_id", "hero_image_url", "extended_html_description", "category_id", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["starts_at", "2017-01-16 13:00:00"], ["ends_at", "2017-01-16 15:30:00"], ["venue_id", 2], ["hero_image_url", "https://media.ticketbox.vn/eventcover/2015/12/11/C68636.jpg?w=1040&maxheight=400&mode=crop&anchor=topcenter"], ["extended_html_description", "  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\">Đan Trường cũng tiết lộ kế hoạch chuẩn bị cho live show kỷ niệm 20 năm ca hát của anh, sẽ diễn ra vào ngày 16-1-2016. “Nói ra, mọi người bảo tôi lo xa nhưng tính tôi là vậy. Tôi là người kỹ tính và chỉn chu trong mọi việc nên không cho phép sai sót, dù nhỏ, trong live show của mình. Để đạt được điều ấy, tôi phải chuẩn bị thật kỹ. Đó là chưa kể có rất nhiều chuyện phải làm cho đến khi diễn ra live show, như phát hành các sản phẩm âm nhạc” - anh tâm sự.</p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\"><img src=\"https://media.ticketbox.vn/agenda/2015/12/14/57EEE9.jpg\" /></p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\">Vẫn là một Đan Trường đa năng bởi sự đa sắc trong âm nhạc, anh đang khát vọng chinh phục mọi đối tượng công chúng yêu nhạc của mình một cách hoàn hảo nhất. Mỗi người có một nhận định, đánh giá riêng về chất giọng cũng như phong cách biểu diễn của Đan Trường nhưng những thành tích mà ca sĩ này gặt hái được trong suốt nhiều năm theo đuổi nghiệp hát thì không ai có thể phủ nhận. 19 năm ca hát, Đan Trường của ngày nay vẫn là một giọng ca được đông đảo công chúng yêu mến.</p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\">Xét ở mọi góc độ, thành công của ca sĩ Đan Trường tại thị trường âm nhạc còn sơ khai như của Việt Nam những năm cuối thập niên 1990 có thể xem là một kỳ tích. Anh xuất hiện khiêm tốn nhưng nhanh chóng tỏa sáng và trở nên nổi bật giữa một rừng ngôi sao ca nhạc Việt Nam lúc ấy.</p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\">Nhìn lại hành trình đã qua của Đan Trường, không thể bỏ qua yếu tố may mắn khi mọi thứ đối với anh gần như được trải hoa hồng. “Thành tựu 19 năm qua mà tôi có được rõ ràng là nhờ may mắn nhưng nếu không có sự cố gắng và nỗ lực một cách tận tâm của mình và cả ông bầu Hoàng Tuấn, tôi không tin có thể đạt được như vậy. Một nghệ sĩ trụ lâu được ở thị trường giải trí là nhờ sự ủng hộ của khán giả nhưng nếu nghệ sĩ ấy không chứng minh cho khán giả thấy mình xứng đáng được yêu mến, công chúng cũng sẽ quay lưng” - Đan Trường chiêm nghiệm.</p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\">“Đan Trường chính là hiện thân một ca sĩ thần tượng đúng nghĩa nhất bởi hiệu ứng tổng thể mang lại từ vóc dáng, giọng hát tình cảm và quan trọng hơn là cách chọn bài hát khá khéo léo của anh. Đan Trường luôn có những ca khúc ăn khách mỗi khi giới thiệu một sản phẩm âm nhạc mới” - ca sĩ Cẩm Ly nhận xét.</p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\">Theo nhạc sĩ Hữu Minh, những cái mới phù hợp với trào lưu hiện tại cũng như với văn hóa của người Việt sẽ mau chóng được công chúng đón nhận. “Thành công của Đan Trường một phần là nhờ sự đón đầu xu hướng mới đó” - nhạc sĩ này khẳng định.</p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\">Mỗi sản phẩm âm nhạc của Đan Trường khi ra mắt đều trở thành bản hit (ăn khách) trên các bảng xếp hạng. Hẳn nhiên, sự yêu mến không điều kiện, vô tư của lực lượng fan (người hâm mộ) hùng hậu đã góp phần không nhỏ trong việc đưa một ca khúc mới của thần tượng đứng đầu bảng xếp hạng âm nhạc. Song, không khó để nhận ra Đan Trường là ca sĩ không ngại thể nghiệm những điều mới mẻ để mang đến người yêu nhạc những sản phẩm lạ tai, đón đầu xu hướng.</p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\"><img src=\"https://media.ticketbox.vn/agenda/2015/12/14/06EAAD.jpg\" /></p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\">Từ nhạc trẻ, trữ tình, âm hưởng dân ca, sử ca, truyền thống cách mạng, đến cả nhạc dance, hip hop, R&B..., Đan Trường đều thử sức, bất chấp tuổi tác. Sự nỗ lực đó luôn mang lại cho anh những quả ngọt là sự đón nhận của khán giả, thậm chí trong từng thể loại âm nhạc khác nhau.</p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:center\"><span style=\"font-size:20px\"><strong>HOTLINE ĐẶT VÉ: 091-333-2198</strong></span></p>\n\n  <p style=\"text-align:justify\"> </p>\n\n  <p style=\"text-align:justify\"><img src=\"https://media.ticketbox.vn/agenda/2015/12/14/0714C1.jpg\" /></p>\n\n  <p style=\"text-align:justify\"> </p>\n\n                          </div>\n                          \n                          <!--/agenda-->\n                      </div>\n                  </div>\n\n"], ["category_id", 1], ["name", "Cảm ơn Đời - Live Concert Đan Trường"], ["created_at", "2017-06-30 17:21:48.138803"], ["updated_at", "2017-06-30 17:21:48.138803"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.2ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 500000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 500000], ["name", "Vé loại A"], ["max_quantity", 10], ["created_at", "2017-06-30 17:21:48.141842"], ["updated_at", "2017-06-30 17:21:48.141842"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ticket_types" SET "event_id" = $1, "updated_at" = $2 WHERE "ticket_types"."id" = $3[0m  [["event_id", 2], ["updated_at", "2017-06-30 17:21:48.144801"], ["id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.2ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 300000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 300000], ["name", "Vé loại B"], ["max_quantity", 50], ["created_at", "2017-06-30 17:21:48.146509"], ["updated_at", "2017-06-30 17:21:48.146509"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ticket_types" SET "event_id" = $1, "updated_at" = $2 WHERE "ticket_types"."id" = $3[0m  [["event_id", 2], ["updated_at", "2017-06-30 17:21:48.148814"], ["id", 4]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.2ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 200000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 200000], ["name", "Vé loại C"], ["max_quantity", 100], ["created_at", "2017-06-30 17:21:48.150292"], ["updated_at", "2017-06-30 17:21:48.150292"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ticket_types" SET "event_id" = $1, "updated_at" = $2 WHERE "ticket_types"."id" = $3[0m  [["event_id", 2], ["updated_at", "2017-06-30 17:21:48.152476"], ["id", 5]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.2ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 150000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 150000], ["name", "Vé loại D"], ["max_quantity", 200], ["created_at", "2017-06-30 17:21:48.154280"], ["updated_at", "2017-06-30 17:21:48.154280"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ticket_types" SET "event_id" = $1, "updated_at" = $2 WHERE "ticket_types"."id" = $3[0m  [["event_id", 2], ["updated_at", "2017-06-30 17:21:48.156313"], ["id", 6]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRegion Load (0.1ms)[0m  [1m[34mSELECT  "regions".* FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Ha Noi"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVenue Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "venues" WHERE "venues"."name" = $1 LIMIT $2[0m  [["name", "Gap Yolo Hanoi"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "venues" ("name", "full_address", "region_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gap Yolo Hanoi"], ["full_address", "1B Quốc Tử Giám, Quận Đống Đa, Hà Nội"], ["region_id", 2], ["created_at", "2017-06-30 17:21:48.158823"], ["updated_at", "2017-06-30 17:21:48.158823"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Entertainment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = $1 LIMIT $2[0m  [["name", "Merry Christmas Never Alone"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("starts_at", "ends_at", "venue_id", "hero_image_url", "extended_html_description", "category_id", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["starts_at", "2017-12-24 13:00:00"], ["ends_at", "2017-12-24 16:00:00"], ["venue_id", 3], ["hero_image_url", "https://media.ticketbox.vn/eventcover/2015/12/12/78534E.jpg?w=1040&maxheight=400&mode=crop&anchor=topcenter"], ["extended_html_description", "         <p>\n  <span style=\"background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,sans-serif; font-size:14px\">* Bạn một m&igrave;nh, bạn FA ?</span><br />\n  <span style=\"background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,sans-serif; font-size:14px\">* Bạn chưa biết l&agrave;m g&igrave; v&agrave;o tối thứ năm cuối th&aacute;ng 12 n&agrave;y ?</span><br />\n  <span style=\"background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,sans-serif; font-size:14px\">* Đ&oacute; l&agrave; đ&ecirc;m gi&aacute;ng sinh, bạn muốn một buổi tối vui vẻ ?</span><br />\n  <span style=\"background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,sans-serif; font-size:14px\">* Bạn muốn nghe những b&agrave;i h&aacute;t hay l&atilde;ng mạn mộc mạc b&ecirc;n c&acirc;y đ&agrave;n guitar ?</span><br />\n  <span style=\"background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,sans-serif; font-size:14px\">* Buffet với tr&agrave;, b&aacute;nh kẹo ngon, tr&aacute;i c&acirc;y tươi đa dạng, phong ph&uacute; với những người bạn mới th&uacute; vị ?</span><br />\n  <span style=\"background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,sans-serif; font-size:14px\">*Được nhận những m&oacute;n qu&agrave; bất ngờ từ &ocirc;ng gi&agrave; Noel :D ?</span><br />\n  <br />\n  <span style=\"background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,sans-serif; font-size:14px\">Nếu bạn cảm thấy thoải m&aacute;i, hứng khởi về những điều tr&ecirc;n bạn h&atilde;y đến với chương tr&igrave;nh Merry Christmas Never Alone do Gap Yolo Hanoi tổ chức tại 1B Quốc Tử Gi&aacute;m, ngay trung t&acirc;m H&agrave; Nội, tr&ecirc;n tầng 5 ngắm phố phường đ&ocirc;ng đ&uacute;c, nhộn nhịp qua lại v&agrave; bầu trời thanh b&igrave;nh H&agrave; Nội.</span><br />\n  <br />\n  <span style=\"background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,sans-serif; font-size:14px\">Gi&aacute; v&eacute; chỉ 99K/ v&eacute;/ người (đ&atilde; bao gồm v&eacute; giữ xe)</span><br />\n  <br />\n  <span style=\"background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,sans-serif; font-size:14px\">Ngo&agrave;i ra c&ograve;n nhiều Voucher tặng bạn v&ocirc; c&ugrave;ng hấp dẫn :D</span></p>\n\n                        </div>\n                        \n"], ["category_id", 1], ["name", "Merry Christmas Never Alone"], ["created_at", "2017-06-30 17:21:48.161619"], ["updated_at", "2017-06-30 17:21:48.161619"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.2ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 99000], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 99000], ["name", "General"], ["max_quantity", 1000], ["created_at", "2017-06-30 17:21:48.164146"], ["updated_at", "2017-06-30 17:21:48.164146"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ticket_types" SET "event_id" = $1, "updated_at" = $2 WHERE "ticket_types"."id" = $3[0m  [["event_id", 3], ["updated_at", "2017-06-30 17:21:48.167407"], ["id", 7]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:22:02 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (starts_at >= '2017-06-30 17:22:03.099067')[0m
+  Rendered events/_card.html.erb (0.7ms)
+  Rendered events/index.html.erb within layouts/application (127.7ms)
+Completed 200 OK in 364ms (Views: 342.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/images/color-me-run.jpg" for 127.0.0.1 at 2017-07-01 00:22:03 +0700
+  
+Started GET "/assets/roboto/Roboto-Light-94a0ac8d73bb60a9cbe27a4fa36669104f6ffa37c8ff2df29313a6c0d3b64a75.woff2" for 127.0.0.1 at 2017-07-01 00:22:03 +0700
+ActionController::RoutingError (No route matches [GET] "/images/color-me-run.jpg"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [31 times] (8.1ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.4ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (94.4ms)
+Started GET "/events/3" for 127.0.0.1 at 2017-07-01 00:22:08 +0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mTicketType Load (0.3ms)[0m  [1m[34mSELECT "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" = $1[0m  [["event_id", 3]]
+  [1m[36mVenue Load (0.3ms)[0m  [1m[34mSELECT  "venues".* FROM "venues" WHERE "venues"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered events/show.html.erb within layouts/application (53.5ms)
+Completed 200 OK in 135ms (Views: 122.6ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/images/shadow-top.png" for 127.0.0.1 at 2017-07-01 00:22:08 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/shadow-top.png"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered collection of /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [31 times] (8.3ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (77.2ms)
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:22:10 +0700
+Started GET "/images/shadow-top.png" for 127.0.0.1 at 2017-07-01 00:22:10 +0700
+Processing by EventsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/images/shadow-top.png"):
+  
+  Rendering events/index.html.erb within layouts/application
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[36mEvent Load (4.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (starts_at >= '2017-06-30 17:22:10.799089')[0m
+  Rendered events/_card.html.erb (0.5ms)
+  Rendered events/index.html.erb within layouts/application (9.1ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.9ms)
+  Rendered collection of /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [31 times] (7.7ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (96.2ms)
+Completed 200 OK in 339ms (Views: 332.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:24:01 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (starts_at >= '2017-06-30 17:24:01.112618')[0m
+  Rendered events/_card.html.erb (1.2ms)
+  Rendered events/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 97ms (Views: 92.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/color-me-run.jpg" for 127.0.0.1 at 2017-07-01 00:24:01 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/color-me-run.jpg"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered collection of /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [31 times] (7.2ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (77.5ms)
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:24:03 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (starts_at >= '2017-06-30 17:24:03.482638')[0m
+  Rendered events/_card.html.erb (0.5ms)
+  Rendered events/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 71ms (Views: 68.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/color-me-run.jpg" for 127.0.0.1 at 2017-07-01 00:24:03 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/color-me-run.jpg"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [31 times] (9.0ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (86.4ms)
+Started GET "/sessions/new" for 127.0.0.1 at 2017-07-01 00:24:05 +0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 72ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-01 00:24:06 +0700
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:5:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:3:in `new'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.1ms)
+Started GET "/users/new" for 127.0.0.1 at 2017-07-01 00:25:26 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 8:                WHERE a.attrelid = '"users"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+             (SELECT c.collname FROM pg_collation c, pg_type t
+               WHERE c.oid = a.attcollation AND t.oid = a.atttypid AND a.attcollation <> t.typcollation),
+                     col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"users"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  
+app/controllers/users_controller.rb:3:in `new'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.2ms)
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:26:07 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (starts_at >= '2017-06-30 17:26:07.516324')[0m
+  Rendered events/_card.html.erb (0.5ms)
+  Rendered events/index.html.erb within layouts/application (162.3ms)
+Completed 200 OK in 340ms (Views: 327.0ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/images/color-me-run.jpg" for 127.0.0.1 at 2017-07-01 00:26:07 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/color-me-run.jpg"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [31 times] (9.0ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.2ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (92.0ms)
+Started GET "/users/new" for 127.0.0.1 at 2017-07-01 00:26:11 +0700
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 8:                WHERE a.attrelid = '"users"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+             (SELECT c.collname FROM pg_collation c, pg_type t
+               WHERE c.oid = a.attcollation AND t.oid = a.atttypid AND a.attcollation <> t.typcollation),
+                     col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"users"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  
+app/controllers/users_controller.rb:3:in `new'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.8ms)
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:26:17 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (starts_at >= '2017-06-30 17:26:17.907306')[0m
+  Rendered events/_card.html.erb (0.4ms)
+  Rendered events/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 82ms (Views: 79.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/color-me-run.jpg" for 127.0.0.1 at 2017-07-01 00:26:18 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/color-me-run.jpg"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [31 times] (9.4ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (89.6ms)
+Started GET "/sessions/new" for 127.0.0.1 at 2017-07-01 00:26:19 +0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 74ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-01 00:26:21 +0700
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 8:                WHERE a.attrelid = '"users"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+             (SELECT c.collname FROM pg_collation c, pg_type t
+               WHERE c.oid = a.attcollation AND t.oid = a.atttypid AND a.attcollation <> t.typcollation),
+                     col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"users"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  
+app/controllers/users_controller.rb:3:in `new'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3892345956427423530);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3892345956427423530)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Ho Chi Minh"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Ha Noi"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Binh Thuan"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Da Nang"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRegion Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Lam Dong"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Entertainment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Learning"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Everything Else"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mRegion Load (0.1ms)[0m  [1m[34mSELECT  "regions".* FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Lam Dong"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVenue Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "venues" WHERE "venues"."name" = $1 LIMIT $2[0m  [["name", "Da Lat City"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Everything Else"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = $1 LIMIT $2[0m  [["name", "Việt Nam Thử Thách Chiến Thắng"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.3ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 500000], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 500000], ["name", "2016 Việt Nam Thử Thách Chiến Thắng dành cho những tay đua đăng kí sớm."], ["max_quantity", 95], ["created_at", "2017-06-30 17:27:17.400241"], ["updated_at", "2017-06-30 17:27:17.400241"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.2ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 2000000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 2000000], ["name", "Việt Nam Thử Thách Chiến Thắng ( Giá chính thức)"], ["max_quantity", 5], ["created_at", "2017-06-30 17:27:17.408400"], ["updated_at", "2017-06-30 17:27:17.408400"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT  "regions".* FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Ho Chi Minh"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVenue Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "venues" WHERE "venues"."name" = $1 LIMIT $2[0m  [["name", "Sân vận động quân khu 7"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Entertainment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = $1 LIMIT $2[0m  [["name", "Cảm ơn Đời - Live Concert Đan Trường"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.2ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 500000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 500000], ["name", "Vé loại A"], ["max_quantity", 10], ["created_at", "2017-06-30 17:27:17.416417"], ["updated_at", "2017-06-30 17:27:17.416417"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.2ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 300000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 300000], ["name", "Vé loại B"], ["max_quantity", 50], ["created_at", "2017-06-30 17:27:17.419281"], ["updated_at", "2017-06-30 17:27:17.419281"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.3ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 200000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 200000], ["name", "Vé loại C"], ["max_quantity", 100], ["created_at", "2017-06-30 17:27:17.421436"], ["updated_at", "2017-06-30 17:27:17.421436"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.2ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 150000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 150000], ["name", "Vé loại D"], ["max_quantity", 200], ["created_at", "2017-06-30 17:27:17.423909"], ["updated_at", "2017-06-30 17:27:17.423909"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRegion Load (0.2ms)[0m  [1m[34mSELECT  "regions".* FROM "regions" WHERE "regions"."name" = $1 LIMIT $2[0m  [["name", "Ha Noi"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVenue Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "venues" WHERE "venues"."name" = $1 LIMIT $2[0m  [["name", "Gap Yolo Hanoi"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "Entertainment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."name" = $1 LIMIT $2[0m  [["name", "Merry Christmas Never Alone"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTicketType Load (0.1ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."event_id" IS NULL AND "ticket_types"."price" = $1 ORDER BY "ticket_types"."id" ASC LIMIT $2[0m  [["price", 99000], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ticket_types" ("price", "name", "max_quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["price", 99000], ["name", "General"], ["max_quantity", 1000], ["created_at", "2017-06-30 17:27:17.430679"], ["updated_at", "2017-06-30 17:27:17.430679"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (184.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "CoderTicket_test"[0m
+  [1m[35m (350.8ms)[0m  [1m[35mCREATE DATABASE "CoderTicket_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "categories" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "events" ("id" serial primary key, "starts_at" timestamp, "ends_at" timestamp, "venue_id" integer, "hero_image_url" character varying, "extended_html_description" text, "category_id" integer, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_category_id" ON "events" USING btree ("category_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_venue_id" ON "events" USING btree ("venue_id")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "regions" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ticket_types" ("id" serial primary key, "event_id" integer, "price" integer, "name" character varying, "max_quantity" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_ticket_types_on_event_id" ON "ticket_types" USING btree ("event_id")[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "venues" ("id" serial primary key, "name" character varying, "full_address" character varying, "region_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_venues_on_region_id" ON "venues" USING btree ("region_id")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "events" ADD CONSTRAINT "fk_rails_fd5598a81d"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "events" ADD CONSTRAINT "fk_rails_f476266cf4"
+FOREIGN KEY ("venue_id")
+  REFERENCES "venues" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "ticket_types" ADD CONSTRAINT "fk_rails_3f5bd3dab9"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "venues" ADD CONSTRAINT "fk_rails_631e818549"
+FOREIGN KEY ("region_id")
+  REFERENCES "regions" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20151215104433)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20151214175835),
+(20151214175903),
+(20151214180054),
+(20151214180128);
+
+[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-06-30 17:31:55.647003"], ["updated_at", "2017-06-30 17:31:55.647003"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (187.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "CoderTicket_test"[0m
+  [1m[35m (375.8ms)[0m  [1m[35mCREATE DATABASE "CoderTicket_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "categories" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "events" ("id" serial primary key, "starts_at" timestamp, "ends_at" timestamp, "venue_id" integer, "hero_image_url" character varying, "extended_html_description" text, "category_id" integer, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_category_id" ON "events" USING btree ("category_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_venue_id" ON "events" USING btree ("venue_id")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "regions" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ticket_types" ("id" serial primary key, "event_id" integer, "price" integer, "name" character varying, "max_quantity" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_ticket_types_on_event_id" ON "ticket_types" USING btree ("event_id")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "venues" ("id" serial primary key, "name" character varying, "full_address" character varying, "region_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_venues_on_region_id" ON "venues" USING btree ("region_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "events" ADD CONSTRAINT "fk_rails_fd5598a81d"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "events" ADD CONSTRAINT "fk_rails_f476266cf4"
+FOREIGN KEY ("venue_id")
+  REFERENCES "venues" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "ticket_types" ADD CONSTRAINT "fk_rails_3f5bd3dab9"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "venues" ADD CONSTRAINT "fk_rails_631e818549"
+FOREIGN KEY ("region_id")
+  REFERENCES "regions" ("id")
+[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20151215104433)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20151214175835),
+(20151214175903),
+(20151214180054),
+(20151214180128);
+
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-06-30 17:32:07.502376"], ["updated_at", "2017-06-30 17:32:07.502376"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/new" for 127.0.0.1 at 2017-07-01 00:32:22 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 8:                WHERE a.attrelid = '"users"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+             (SELECT c.collname FROM pg_collation c, pg_type t
+               WHERE c.oid = a.attcollation AND t.oid = a.atttypid AND a.attcollation <> t.typcollation),
+                     col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"users"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  
+app/controllers/users_controller.rb:3:in `new'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.1ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3892345956427423530);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPublishToEvents (20170630060102)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class AddPublishToEvents < ActiveRecord::Migration[4.2] (called from block in execute at /Users/macOS/.rvm/gems/ruby-2.4.0@global/gems/rake-12.0.0/lib/rake/task.rb:250)
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "events" ADD "publish" boolean[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170630060102"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20170630140642)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateUsers < ActiveRecord::Migration[4.2] (called from block in execute at /Users/macOS/.rvm/gems/ruby-2.4.0@global/gems/rake-12.0.0/lib/rake/task.rb:250)
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170630140642"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUserIdToEvents (20170630164225)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class AddUserIdToEvents < ActiveRecord::Migration[4.2] (called from block in execute at /Users/macOS/.rvm/gems/ruby-2.4.0@global/gems/rake-12.0.0/lib/rake/task.rb:250)
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "events" ADD "user_id" integer[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_user_id" ON "events"  ("user_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "events" ADD CONSTRAINT "fk_rails_0cb5590091"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170630164225"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3892345956427423530)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/users/new" for 127.0.0.1 at 2017-07-01 00:39:39 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 372ms (Views: 347.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-07-01 00:40:25 +0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 78ms (Views: 76.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-01 00:40:41 +0700
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (starts_at >= '2017-06-30 17:40:41.174416')[0m
+  Rendered events/_card.html.erb (0.6ms)
+  Rendered events/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 88ms (Views: 76.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/images/color-me-run.jpg" for 127.0.0.1 at 2017-07-01 00:40:41 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/images/color-me-run.jpg"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered collection of /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [31 times] (6.7ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendering /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/macOS/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (81.2ms)

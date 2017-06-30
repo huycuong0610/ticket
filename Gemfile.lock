@@ -42,6 +42,7 @@ GEM
     arel (7.1.4)
     autoprefixer-rails (6.5.1.1)
       execjs
+    bcrypt (3.1.11)
     bootstrap (4.0.0.alpha5)
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.4.19)
@@ -156,6 +157,7 @@ GEM
       ffi (>= 0.5.0)
     rdoc (4.2.2)
       json (~> 1.4)
+    remotipart (1.3.1)
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)
@@ -210,6 +212,8 @@ GEM
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.5)
+    toastr-rails (1.0.3)
+      railties (>= 3.1.0)
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.0)
@@ -230,6 +234,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootstrap (~> 4.0.0.alpha5)
   byebug
   coffee-rails (~> 4.1.0)
@@ -243,12 +248,14 @@ DEPENDENCIES
   puma (~> 3.7, >= 3.7.1)
   rails (~> 5.0.1)
   rails-assets-tether (>= 1.1.0)!
+  remotipart (~> 1.2)
   rspec-rails (~> 3.5, >= 3.5.2)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simple_form
   simplecov (~> 0.12.0)
   spring
+  toastr-rails
   turbolinks (~> 5)
   uglifier (>= 1.3.0)
   web-console
