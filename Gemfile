@@ -33,6 +33,13 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
 
+# image upload
+gem 'carrierwave'
+gem 'mini_magick'
+# omniauth
+gem 'omniauth'
+gem 'omniauth-facebook', '~> 3.0.0'
+
 gem 'bootstrap', '~> 4.0.0.alpha5'
 gem 'simple_form'
 gem 'font-awesome-rails'

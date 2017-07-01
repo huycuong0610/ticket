@@ -15,8 +15,19 @@ class SessionsController < ApplicationController
 	 end
   end
 
+  def callback
+    if (user = FacebookAuthenticateService.new(env['omniauth.auth']).authenticate)
+      store_user_id(user.id)
+    else
+      flash[:alert] = 'Can not login with facebook'
+    end
+    redirect_to root_path
+  end
+
   def destroy
   	session[:user_id] = nil
   	redirect_to sessions_new_path, notice: "Logged out"
   end
+
+  
 end

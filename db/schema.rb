@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170630164225) do
+ActiveRecord::Schema.define(version: 20170701180512) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,9 @@ ActiveRecord::Schema.define(version: 20170630164225) do
     t.datetime "updated_at",                null: false
     t.boolean  "publish"
     t.integer  "user_id"
+    t.boolean  "is_host"
+    t.boolean  "is_published"
+    t.boolean  "is_hot"
     t.index ["category_id"], name: "index_events_on_category_id", using: :btree
     t.index ["user_id"], name: "index_events_on_user_id", using: :btree
     t.index ["venue_id"], name: "index_events_on_venue_id", using: :btree
@@ -60,6 +63,7 @@ ActiveRecord::Schema.define(version: 20170630164225) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "avatar"
   end
 
   create_table "venues", force: :cascade do |t|

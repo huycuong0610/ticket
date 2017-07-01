@@ -4,13 +4,24 @@ Rails.application.routes.draw do
   post 'sessions/create'
   delete '/logout' => 'sessions#destroy'
   root 'events#index'
-  get '/events/list' => 'events#list'
+
+
+  resources :events, except: [:destroy] do
+    collection do
+      post :search
+      get :mine
+    end
+
+    member do
+      get :publish
+    end
+  end
   resources :venue, only:[:new, :create]
-  resources :users
+    resources :users, only: [:create, :edit, :update, :new]
     resources :events do
       resources :tickets
     end
-  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

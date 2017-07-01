@@ -24,6 +24,11 @@ class EventsController < ApplicationController
   	end
   end
 
+  def mine
+    @events = current_user.events.order('created_at desc')
+                  .preload(:venue, :category)
+  end
+
   def update
     @event = Event.find_by_id(params[:id])
     event_params.merge(user_id: current_user.id)
