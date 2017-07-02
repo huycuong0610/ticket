@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170701180512) do
+ActiveRecord::Schema.define(version: 20170701151047) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 20170701180512) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "event_admins", force: :cascade do |t|
+    t.integer  "event_id"
+    t.integer  "admin_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["admin_id"], name: "index_event_admins_on_admin_id", using: :btree
+    t.index ["event_id"], name: "index_event_admins_on_event_id", using: :btree
+  end
+
   create_table "events", force: :cascade do |t|
     t.datetime "starts_at"
     t.datetime "ends_at"
@@ -29,15 +38,12 @@ ActiveRecord::Schema.define(version: 20170701180512) do
     t.text     "extended_html_description"
     t.integer  "category_id"
     t.string   "name"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.boolean  "publish"
-    t.integer  "user_id"
-    t.boolean  "is_host"
-    t.boolean  "is_published"
-    t.boolean  "is_hot"
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
+    t.boolean  "published",                 default: false
+    t.integer  "creator_id"
     t.index ["category_id"], name: "index_events_on_category_id", using: :btree
-    t.index ["user_id"], name: "index_events_on_user_id", using: :btree
+    t.index ["creator_id"], name: "index_events_on_creator_id", using: :btree
     t.index ["venue_id"], name: "index_events_on_venue_id", using: :btree
   end
 
@@ -52,18 +58,19 @@ ActiveRecord::Schema.define(version: 20170701180512) do
     t.integer  "price"
     t.string   "name"
     t.integer  "max_quantity"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "min_quantity", default: 1
     t.index ["event_id"], name: "index_ticket_types_on_event_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
     t.string   "email"
+    t.string   "name"
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.string   "avatar"
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
   create_table "venues", force: :cascade do |t|
@@ -75,8 +82,10 @@ ActiveRecord::Schema.define(version: 20170701180512) do
     t.index ["region_id"], name: "index_venues_on_region_id", using: :btree
   end
 
+  add_foreign_key "event_admins", "events"
+  add_foreign_key "event_admins", "users", column: "admin_id", name: "event_admin"
   add_foreign_key "events", "categories"
-  add_foreign_key "events", "users"
+  add_foreign_key "events", "users", column: "creator_id", name: "event_creator"
   add_foreign_key "events", "venues"
   add_foreign_key "ticket_types", "events"
   add_foreign_key "venues", "regions"

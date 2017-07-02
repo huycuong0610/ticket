@@ -1,30 +1,45 @@
 require 'rails_helper'
 
 RSpec.describe EventsController, type: :controller do
-    describe "Index successful" do
-	   it "responds successfully with an HTTP 200 status code" do
-	   	 get :index
-	   	 expect(response).to be_success
-	   	 expect(response).to have_http_status(200)
-	   end
+  let(:user_1) { User.create!(email: 'test1', password: 'abc', password_confirmation: 'abc') }
+  let(:user_2) { User.create!(email: 'test2', password: 'abc', password_confirmation: 'abc') }
+  let(:past_event) { Event.create!(name: 'past_event',
+                                   extended_html_description: 'past_event',
+                                   venue: Venue.create,
+                                   category: Category.create,
+                                   starts_at: Date.new(2001, 1, 1)) }
+  let(:future_event) { Event.create!(name: 'future_event',
+                                     extended_html_description: 'future_event',
+                                     venue: Venue.create,
+                                     category: Category.create,
+                                     starts_at: Date.new(3000, 1, 1)) }
+  let(:published_event) { Event.create!(name: 'published_event',
+                                        extended_html_description: 'published_event',
+                                        venue: Venue.create,
+                                        category: Category.create,
+                                        starts_at: Date.new(3000, 1, 1),
+                                        published: true,
+                                        creator: user_1) }
+  describe 'GET index' do
+    it 'show only future and published events' do
+      get :index
+      expect(assigns[:events]).to eq([published_event])
+    end
+  end
 
-	   it "Make sure renders correct the index template" do
-	   	 get :index
-	   	 expect(response).to render_template("index")
-	   end
-	end
+  describe 'POST update' do
+    it 'redirect when user is not admin' do
+      session[:user_id] = user_2.id
+      post :update, :id => published_event.id
+      expect(response).to redirect_to(my_events_events_path)
+    end
+  end
 
-	describe "Edit functional" do
-		it "user who created the event can edit the event" do
-			user1 = User.new(name: "cuong", email: "cuong@gmail.com", password: "123")
-			user2 = User.new(name: "teo", email: "teo@gmail.com", password: "123")
-			user1.save
-			user2.save
-			event = Event.new(user_id: user1.id)
-			event.save! validate: false
-			allow(controller).to receive(:current_user) { user1 }
-			get :edit, id: event.id
-			expect(response).to render_template("edit")
-		end
-	end
+  describe 'POST publish' do
+    it 'redirect when user is not admin' do
+      session[:user_id] = user_2.id
+      post :publish, :id => published_event.id
+      expect(response).to redirect_to(event_path(published_event))
+    end
+  end
 end

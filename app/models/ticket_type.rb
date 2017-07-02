@@ -1,23 +1,19 @@
 class TicketType < ActiveRecord::Base
   belongs_to :event
 
-  before_create :check_duplicates
-
-  def check_duplicates
-  	if TicketType.where(event: event, price: price).first
-  		errors.add(:base, "Can not have duplicates")
-  	end
+  def min_quantity_to_purchase
+    if !!min_quantity && 0 < min_quantity && min_quantity <= 10
+      min_quantity
+    else
+      1
+    end
   end
 
-  def check_quantity(quantity)
-  	if max_quantity < quantity
-  		errors.add(:base, "Quanlity can not great than max_quantity")
-  	end
-  end
-
-  def max_quantity_buy(quantity)
-  	if quantity > 10
-  		errors.add(:base, "Quanlity can not great than 10")
-  	end
+  def max_quantity_to_purchase
+    if !!max_quantity && max_quantity <= 10
+      max_quantity
+    else
+      10
+    end
   end
 end

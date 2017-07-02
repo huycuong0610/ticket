@@ -1,39 +1,35 @@
-# Homework 3 - *Coder Ticket*
+# Homework 3 - *Coderticket*
 
-**Coder Ticket** is a Ruby on Rails application that allows users to create and buy tickets to cool events.
+**Coderticket** is a Ruby on Rails blog application that allows users to create and buy tickets to cool events.
 
-- Submitted by: **Cuong Nguyen**
-- Time spent: **24** hours
-- URL: **Insert your Heroku URL here**
-- SimpleCov Test Coverage: [coverage/index.html](coverage/index.html)
+Submitted by: **Kha Nguyen**
+
+Time spent: **12** hours
+
+URL: **https://radiant-temple-24611.herokuapp.com**
+
+SimpleCov Test Coverage: **Insert percentage or link to report here**
 
 ## User Stories
 
 The following **required** functionality is complete:
 
-* [ x ] Implement required user stories
-* [ x ] 10 model tests, 2 route tests, 2 controller tests, 2 view tests.
-
-The person with best test coverage will win a small present from the instructor :)
+* [x] 10 model tests, 2 route tests, 2 controller tests, 2 view tests.
 
 #### Events
 
-* [ x ] Users can see a list of upcoming events. Past events should not be shown.
-    * **HINT**: Good candidate for a test. You can write test first --> fail --> fast similar to demo
-    * Suggestions:
-        * Implement `/upcoming` route test to go to 'events#index'
-        * Implement `Event.upcoming` class method (with a test)
-        * Implement `EventsController#index` action test
-* [ x ] Users can search for events from the homepage.
-* [ x ] Users can click on an event to see details about the event.
-* [ x ] Users can click on "Book Now" to go to a page to purchase tickets.
+* [x] Users can see a list of upcoming events. Past events should not be shown.
+* [x] Users can search for events from the homepage.
+* [x] Users can click on an event to see details about the event.
+* [x] Users can click on "Book Now" to go to a page to purchase tickets.
 
 #### Tickets
 
-* [x] Each event can have multiple types of tickets, each with a different `price` and `max_quantity`.
+* [x] Each event can have multiple types of tickets, each with a different `price` and `max_quantity`. 
 * [x] Users can buy tickets to an event, choose the types of tickets, and the quantity of tickets.
 * [x] Users cannot buy more tickets than the quantity available.
-* [x] Users can only buy up to 10 of a ticket type at a time. Show a nice flash message.
+* [x] Users can only buy up to 10 of a ticket type at a time.
+* [x] Users cannot buy tickets to events that occur in the past.
 
 #### Users
 
@@ -41,31 +37,25 @@ The person with best test coverage will win a small present from the instructor 
 * [x] User can login using an email and password.
 * [x] Users can create events.
 * [x] Users must click "publish event" before an event becomes viewable to other users.
-    * **HINT**: use `published_at:datetime` and `Event.published` scope (class method)
-    * Suggestions:
-        * See [Add More RESTful Actions](http://guides.rubyonrails.org/routing.html#adding-more-restful-actions) to add a `publish` POST action (member type)
-        * Write a test to make sure only an event creator can publish an event
 * [x] Users can create ticket types for that event.
-    * **HINT**: make sure you understand what a ticket tpe is. Ask if not clear.
 * [x] Users can create venues.
 * [x] An event must have at least one `ticket_type` defined before it can be published.
-    * **HINT**: add `Event#have_enough_ticket_types?` (and test it)
 * [x] User can see a list of events he or she has created.
-    * Suggestions
-        * You can use `/events/mine` [collection routes](http://guides.rubyonrails.org/routing.html#adding-more-restful-actions)
 * [x] Users can edit their event after creation. But only the user who created the event can edit the event.
-    * **HINT**: use a `before_action :check_event_changing_permission` to redirect users to event page with a flash error if applicable.
 
 ### Optional Stories
 
-* [ ] Users cannot buy tickets to events that occur in the past.
-* [ ! ] Users can log in with Facebook.
+* [ ] Users can log in with Facebook.
 * [ ] Users receive an email when they have purchased a ticket.
-* [ ! ] Users can see "related events" when browsing an event. Related events should belong to the same category and be in the same region.
-* [ ] User A can allow User B to edit User A's event. In other words, an event owner can assign other people to be "event admins".
-* [ ] Ticket types have an optional "minimum" purchase quantity. ([Example Screenshot](http://i.imgur.com/DOYtAR0.png))
-* [ ! ] Events are automatically labeled as "Hot". "Hot" events should have a red border or some sort of visual flourish. The event title should also be prefixed with "**HOT:**".
-* [ ! ] Instead of showing all of the events on the main page, an "admin" user can dictate the events that show up on the main page.
+* [x] Users can see "related events" when browsing an event. Related events should belong to the same category and be in the same region.
+* [x] User A can allow User B to edit User A's event. In other words, an event owner can assign other people to be "event admins".
+* [x] Ticket types have an optional "minimum" purchase quantity. ([Example Screenshot](http://i.imgur.com/DOYtAR0.png))
+* [ ] Events are automatically labeled as "Hot". "Hot" events should have a red border or some sort of visual flourish. The event title should also be prefixed with "**HOT:**".
+* [ ] Instead of showing all of the events on the main page, an "admin" user can dictate the events that show up on the main page.
+
+## Walkthrough
+
+![Video Walkthrough](walkthrougth.gif)
 
 ## Notes
 

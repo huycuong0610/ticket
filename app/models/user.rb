@@ -1,10 +1,10 @@
 class User < ActiveRecord::Base
-  has_many :events
+  has_many :created_events, class_name: Event, foreign_key: :creator_id
+  has_many :managing_events, class_name: Event, through: :event_admins, source: :event
+  has_many :event_admins, foreign_key: :admin_id
 
   has_secure_password
-  mount_uploader :avatar, ImageUploader
-  validates :password, length: {minimum: 8}, presence: true, allow_nil: true
-  validates :name, presence: true
-  validates :email, presence: true, uniqueness: true,
-            format: /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
+  validates :email, uniqueness: true, presence: true
+  validates :password_confirmation, presence: true
+
 end

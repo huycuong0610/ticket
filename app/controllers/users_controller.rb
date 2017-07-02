@@ -1,41 +1,49 @@
 class UsersController < ApplicationController
-	before_action :get_user, only: [:edit, :update]
-	def new
-		@user = User.new
-	end
 
-	def create
-		@user = User.new user_params
-		if @user.save
-			session[:user_id] = @user.id
-			redirect_to root_path, notice: "account created"
-		else
-			render "new"
-		end
-	end
+  
+  before_action :skip_login, only: [:show_login_form, :show_register_form]
 
-	def edit
-		@user = User.find(params[:id])
- 	end
+  def show_login_form
+    render 'users/login', layout: 'no_header'
+  end
 
-	def update
-		if @user.update_attributes(user_update_params)
-		flash[:notice] = 'Update successfully'
-		redirect_to root_path
-		else
-		render :edit
-		end
-  	end
+  def do_login
+    @user = User.find_by_email(params[:email]).try(:authenticate, params[:password])
+    if !!@user
+      store_id_and_redirect_to_home(@user)
+    else
+      flash[:error] = 'Invalid email or password'
+      redirect_to login_path
+    end
+  end
 
-	def get_user
-		@user = User.find(params[:id])
-	end
+  def show_register_form
+    @user = User.new
+    render 'users/register', layout: 'no_header'
+  end
 
-	private
-	def user_params
-		params.require(:user).permit(:name, :email, :password)
-	end
-	def user_update_params
-		params.require(:user).permit(:name, :avatar, :password, :password_confirmation)
-	end
+  def do_create_user
+    @user = User.new(user_params)
+    if @user.valid?
+      @user.save
+      store_id_and_redirect_to_home(@user)
+    else
+      render 'users/register', layout: 'no_header'
+    end
+  end
+
+  def do_logout
+    reset_session
+    redirect_to login_path
+  end
+
+  private
+  def user_params
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  end
+
+  def store_id_and_redirect_to_home(user)
+    session[:user_id] = user.id
+    redirect_to root_path
+  end
 end

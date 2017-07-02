@@ -1,50 +1,58 @@
 require 'rails_helper'
 
-	let(:event) {event = Event.new}
-  describe "#venue_name" do
-  	it "return nil if there is no venue" do
-  		expect(event.venue_name).to be_nil
-  	end
-
-  	it "returns venue name if there is a event" do
-  		event.venue = Venue.new(name: "RMIT")
-  		expect(event.venue_name).to eq "RMIT"
-  	end
-  end
-
-  describe "#feature_events" do
-    it "Past events should not be shown"  do
-       event1, event2 = Event.new(starts_at: 1.day.ago), Event.new(starts_at: DateTime.now + 5.days)
-       event1.save! validate: false
-       event2.save! validate: false 
-       expect(Event.feature_events).to eq [event2]
-     end
-  end 
-
-  RSpec.describe Event, type: :model do
-  describe ".upcoming" do
-    it "return [] when there are no events" do
-      expect(Event.upcoming).to eq []
+RSpec.describe Event, type: :model do
+  describe '#outdated?' do
+    context 'when starts_at is before today' do
+      it 'should return true' do
+        event = Event.new(starts_at: Date.new(2001, 2, 3))
+        expect(event.outdated?).to eq true
+      end
     end
-    it "return [] when there are only past events" do
-      Event.create!(starts_at: 2.days.ago, ends_at: 1.day.ago, extended_html_description: " a past event",
-                    venue: Venue.new, category: Category.new)
-      expect(Event.upcoming).to eq []
-    end
-    it "return [b] when there are a past event 'a' and a future event 'b'" do
-      a = Event.create!(name: "a", starts_at: 2.days.ago, ends_at: 1.day.ago, extended_html_description: "a past event",
-                    venue: Venue.new, category: Category.new)
-      b = Event.create!(name: "b", starts_at: 2.days.ago, ends_at: 1.day.from_now, extended_html_description: " a future event",
-                    venue: Venue.new, category: Category.new)
-      expect(Event.upcoming).to eq [b]
+    context 'when starts_at is after today' do
+      it 'should return false' do
+        event = Event.new(starts_at: Date.new(3000, 2, 3))
+        expect(event.outdated?).to eq false
+      end
     end
   end
 
-  describe "Event have at least one ticket type" do
-    it "Event dont have ticket type" do
-      event.publish = true
-      event.save! validate: false
-      expect(event.make_publish).to eq nil
+  describe '#can_publish?' do
+    subject(:event) { Event.create!(extended_html_description: 'somewhere',
+                                    venue: Venue.create,
+                                    category: Category.create,
+                                    starts_at: Date.today) }
+    context 'when event is already published' do
+      it 'should return false' do
+        event.published = true
+        expect(event.can_publish?).to eq false
+      end
+    end
+
+    context 'when event is not published' do
+      context 'when event has no ticket type' do
+        it 'should return false' do
+          expect(event.can_publish?).to eq false
+        end
+      end
+      context 'when event has at least 1 ticket type' do
+        it 'should return true' do
+          TicketType.create(event: event)
+          expect(event.can_publish?).to eq true
+        end
+      end
+    end
+  end
+
+  describe '#create' do
+    context 'when an event is created' do
+      it 'should add creator as admin' do
+        event = Event.create!(extended_html_description: 'somewhere',
+                              venue: Venue.create,
+                              category: Category.create,
+                              starts_at: Date.today,
+                              creator: User.create!(email: 'test', password: 'abc', password_confirmation: 'abc'))
+        expect(event.admins).to include(event.creator)
+      end
     end
   end
 end

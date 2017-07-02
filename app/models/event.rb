@@ -1,46 +1,31 @@
 class Event < ActiveRecord::Base
   belongs_to :venue
   belongs_to :category
-  belongs_to :user
+  belongs_to :creator, class_name: User
+
   has_many :ticket_types
-  mount_uploader :local_image, ImageUploader
-  before_validation :set_image
+  has_many :event_admins
+  has_many :admins, class_name: User, through: :event_admins
+
+  after_create :add_creator_as_admin
+
   validates_presence_of :extended_html_description, :venue, :category, :starts_at
   validates_uniqueness_of :name, uniqueness: {scope: [:venue, :starts_at]}
 
-  def venue_name
-  	venue ? venue.name : nil
+  def published?
+    published
   end
 
-  def self.search(search)
-  	where("name ILIKE?", "%#{search}%")
+  def outdated?
+    starts_at < Date.today
   end
 
-  def self.feature_events
-  	 where("starts_at >= ?", DateTime.now)
+  def can_publish?
+    !published? && ticket_types.count > 0
   end
 
-  def self.own_events(user)
-    where("user_id = ?", user.id)
-  end
-
-  def related
-    Event.upcoming.joins(:venue).where("category_id = ? AND region_id = ? AND events.id != ?",
-                                       category_id, region_id, id)
-  end
-
-  def set_image
-    self.image = local_image_url if local_image_url
-  end
-
-  def upcoming?
-    start_at > Time.now
-  end
-
-  def make_publish
-    if self.ticket_types.count >= 1
-      self.publish = true
-      self.save!
-    end
+  private
+  def add_creator_as_admin
+    EventAdmin.create({admin_id: creator_id, event_id: id})
   end
 end

@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.remotipart
-//= require materialize-sprockets
+//= require bootstrap-sprockets
 //= require turbolinks
-//= require toastr
+//= require_tree .
