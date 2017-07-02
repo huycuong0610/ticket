@@ -4038,3 +4038,4 @@ Processing by UsersController#show_login_form as HTML
 Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.2ms)
 
 
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from require at /Users/macOS/.rvm/rubies/ruby-2.4.0/lib/ruby/site_ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55)

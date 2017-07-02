@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use pg as the database for Active Record
+# Use Puma as the app server
+gem 'puma', '~> 3.7', '>= 3.7.1'
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -43,7 +45,9 @@ gem 'font-kit-rails', '~> 1.2.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
+  gem 'simplecov', '~> 0.12.0', require: false
+  gem 'guard-rspec', require: false
 end
 
 group :development do
