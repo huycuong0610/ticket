@@ -2,9 +2,9 @@
 
 **Coderticket** is a Ruby on Rails blog application that allows users to create and buy tickets to cool events.
 
-Submitted by: **Kha Nguyen**
+Submitted by: **Cuong Nguyen**
 
-Time spent: **12** hours
+Time spent: **24** hours
 
 URL: **https://radiant-temple-24611.herokuapp.com**
 

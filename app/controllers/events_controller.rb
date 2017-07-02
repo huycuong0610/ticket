@@ -21,7 +21,7 @@ class EventsController < ApplicationController
   end
 
   def new
-    @event = Event.new(hero_image_url: 'https://az810747.vo.msecnd.net/eventcover/2015/10/25/C6A1A5.jpg?w=1040&maxheight=400&mode=crop&anchor=topcenter')
+    @event = Event.new(hero_image_url: 'http://media.mangtinmoi.com/files/news/2015/09/thim-ha-la-ai-va-vi-sao-ca-sy-vu-ha-bi-goi-la-thim-ha-mot.jpeg')
   end
 
   def my_events

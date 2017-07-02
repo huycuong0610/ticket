@@ -2665,3 +2665,15 @@ DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is dep
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "ticket_types" SET "event_id" = $1, "updated_at" = $2 WHERE "ticket_types"."id" = $3[0m  [["event_id", 3], ["updated_at", "2017-07-02 12:17:17.436462"], ["id", 7]]
   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2017-07-02 19:23:48 +0700
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from call at /Users/macOS/.rvm/gems/ruby-2.4.0@global/gems/rack-2.0.3/lib/rack/method_override.rb:22)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (starts_at >= '2017-07-02' and published = true) ORDER BY "events"."starts_at" DESC[0m
+  Rendered events/index.html.erb within layouts/application (158.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 272ms (Views: 233.8ms | ActiveRecord: 5.3ms)
+
+
