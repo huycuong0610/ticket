@@ -6,7 +6,7 @@ Submitted by: **Cuong Nguyen**
 
 Time spent: **24** hours
 
-URL: **https://radiant-temple-24611.herokuapp.com**
+URL: **https://coderticketcuong.herokuapp.com**
 
 SimpleCov Test Coverage: **Insert percentage or link to report here**
 
